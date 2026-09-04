@@ -1,0 +1,5 @@
+interface:
+  display_name: "表格流程助手"
+  short_description: "把人工表格流程沉淀为可验证、可复用、可迭代的任务模板"
+  default_prompt: "使用 $spreadsheet-workflow，根据我的源表和人工正确结果新建或运行一个可复用的表格任务模板。"
+

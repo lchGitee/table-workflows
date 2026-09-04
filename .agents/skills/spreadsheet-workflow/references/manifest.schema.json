@@ -1,0 +1,472 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.invalid/spreadsheet-workflow/manifest.schema.json",
+  "title": "Spreadsheet workflow manifest v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "workflowId",
+    "name",
+    "version",
+    "status",
+    "createdAt",
+    "updatedAt",
+    "inputSlots",
+    "target",
+    "implementation",
+    "validation"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "0.1"
+    },
+    "workflowId": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]{0,63}$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 120
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 1000
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "status": {
+      "enum": [
+        "DRAFT",
+        "TRIAL",
+        "VALIDATED",
+        "NEEDS_REVIEW",
+        "RETIRED"
+      ]
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "previousVersion": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "inputSlots": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/inputSlot"
+      }
+    },
+    "target": {
+      "$ref": "#/$defs/target"
+    },
+    "implementation": {
+      "$ref": "#/$defs/implementation"
+    },
+    "validation": {
+      "$ref": "#/$defs/validation"
+    },
+    "parameters": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/parameter"
+      }
+    },
+    "changeSummary": {
+      "type": "string",
+      "maxLength": 2000
+    }
+  },
+  "$defs": {
+    "fingerprint": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "algorithm",
+        "value",
+        "basis"
+      ],
+      "properties": {
+        "algorithm": {
+          "const": "sha256"
+        },
+        "value": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "basis": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "inputSlot": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "slotId",
+        "label",
+        "required",
+        "multiple",
+        "acceptedExtensions",
+        "structureFingerprint"
+      ],
+      "properties": {
+        "slotId": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9-]{0,63}$"
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "required": {
+          "type": "boolean"
+        },
+        "multiple": {
+          "type": "boolean"
+        },
+        "acceptedExtensions": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^\\.[A-Za-z0-9]+$"
+          }
+        },
+        "structureFingerprint": {
+          "$ref": "#/$defs/fingerprint"
+        }
+      }
+    },
+    "target": {
+      "type": "object",
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "mode": {
+                "const": "SAVED_TEMPLATE"
+              }
+            },
+            "required": [
+              "mode"
+            ]
+          },
+          "then": {
+            "required": [
+              "templatePath",
+              "structureFingerprint"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "mode": {
+                "const": "USER_PROVIDED_TEMPLATE"
+              }
+            },
+            "required": [
+              "mode"
+            ]
+          },
+          "then": {
+            "required": [
+              "structureFingerprint"
+            ]
+          }
+        }
+      ],
+      "required": [
+        "mode",
+        "outputExtension",
+        "writeScopes",
+        "protectedScopes",
+        "preserveUnlistedCells"
+      ],
+      "properties": {
+        "mode": {
+          "enum": [
+            "SAVED_TEMPLATE",
+            "USER_PROVIDED_TEMPLATE",
+            "GENERATED"
+          ]
+        },
+        "templatePath": {
+          "type": "string",
+          "minLength": 1
+        },
+        "structureFingerprint": {
+          "$ref": "#/$defs/fingerprint"
+        },
+        "outputExtension": {
+          "type": "string",
+          "pattern": "^\\.[A-Za-z0-9]+$"
+        },
+        "writeScopes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "protectedScopes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "preserveUnlistedCells": {
+          "type": "boolean"
+        }
+      }
+    },
+    "artifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "kind",
+        "sha256"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kind": {
+          "enum": [
+            "SCRIPT",
+            "DSL",
+            "RUNNER",
+            "DEPENDENCY_LOCK",
+            "STRUCTURE_CONTRACT",
+            "OTHER"
+          ]
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      }
+    },
+    "implementation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "entrypoint",
+        "command",
+        "artifacts"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "SCRIPT",
+            "DSL"
+          ]
+        },
+        "entrypoint": {
+          "type": "string",
+          "minLength": 1
+        },
+        "command": {
+          "type": "array",
+          "minItems": 1,
+          "contains": {
+            "const": "{request}"
+          },
+          "minContains": 1,
+          "maxContains": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "runtime": {
+          "type": "string",
+          "maxLength": 200
+        },
+        "artifacts": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/artifact"
+          }
+        }
+      }
+    },
+    "goldCase": {
+      "type": "object",
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "storage": {
+                "const": "REPLAYABLE"
+              }
+            },
+            "required": [
+              "storage"
+            ]
+          },
+          "then": {
+            "required": [
+              "requestPath",
+              "expectedResultPath"
+            ]
+          }
+        }
+      ],
+      "required": [
+        "caseId",
+        "storage",
+        "result"
+      ],
+      "properties": {
+        "caseId": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9-]{0,63}$"
+        },
+        "storage": {
+          "enum": [
+            "REPLAYABLE",
+            "REFERENCE_ONLY"
+          ]
+        },
+        "requestPath": {
+          "type": "string",
+          "minLength": 1
+        },
+        "expectedResultPath": {
+          "type": "string",
+          "minLength": 1
+        },
+        "result": {
+          "enum": [
+            "PASS",
+            "FAIL",
+            "NOT_RUN"
+          ]
+        },
+        "usedForDiscovery": {
+          "type": "boolean"
+        },
+        "lastRunAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "acceptedDifferenceCount": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "invariant": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "description",
+        "severity"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9-]{0,63}$"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        },
+        "severity": {
+          "enum": [
+            "BLOCK",
+            "WARN"
+          ]
+        },
+        "checker": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "validation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "goldCases",
+        "invariants"
+      ],
+      "properties": {
+        "goldCases": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/goldCase"
+          }
+        },
+        "invariants": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/invariant"
+          }
+        },
+        "lastValidatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "parameter": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "type",
+        "required"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_-]{0,63}$"
+        },
+        "type": {
+          "enum": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "date"
+          ]
+        },
+        "required": {
+          "type": "boolean"
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "default": {}
+      }
+    }
+  }
+}
