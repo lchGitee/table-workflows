@@ -8,7 +8,7 @@
 
 ### 安装到单个项目
 
-将 `.agents/skills/spreadsheet-workflow` 复制到目标项目的同名目录：
+本仓库根目录就是 `spreadsheet-workflow` Skill。将仓库根目录中的 `SKILL.md`、`agents/` 和 `references/` 复制到目标项目：
 
 ```text
 <target-project>/.agents/skills/spreadsheet-workflow
@@ -16,13 +16,13 @@
 
 ### 安装为个人 Skill
 
-将该目录复制到：
+将本仓库根目录中的 Skill 文件复制到：
 
 ```text
 ~/.agents/skills/spreadsheet-workflow
 ```
 
-在 Codex 中，也可以让 `$skill-installer` 从本仓库的 `.agents/skills/spreadsheet-workflow` 路径安装。
+在 Codex 中，也可以让 `$skill-installer` 直接从本仓库安装；Skill 入口位于仓库根目录。
 
 ## 使用
 
@@ -45,8 +45,10 @@ $spreadsheet-workflow
 ## 仓库结构
 
 ```text
-.agents/skills/spreadsheet-workflow/
+table-workflows/
 ├── SKILL.md
-├── agents/openai.yaml
-└── references/
+├── agents/
+│   └── openai.yaml
+├── references/
+└── README.md
 ```
