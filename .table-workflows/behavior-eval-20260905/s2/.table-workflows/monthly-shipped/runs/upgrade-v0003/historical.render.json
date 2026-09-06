@@ -1,0 +1,14 @@
+{
+  "rows": [
+    [
+      "W01",
+      2
+    ],
+    [
+      "W02",
+      3
+    ]
+  ],
+  "outputPath": "/Users/lch/Desktop/project/table-workflows/.table-workflows/behavior-eval-20260905/s2/.table-workflows/monthly-shipped/runs/upgrade-v0003/historical-result.xlsx",
+  "previewPath": "/Users/lch/Desktop/project/table-workflows/.table-workflows/behavior-eval-20260905/s2/.table-workflows/monthly-shipped/runs/upgrade-v0003/historical.png"
+}

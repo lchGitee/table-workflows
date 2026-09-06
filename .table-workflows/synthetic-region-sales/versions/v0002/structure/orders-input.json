@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "0.1",
+  "role": "orders-source",
+  "fileType": ".xlsx",
+  "worksheets": [
+    {
+      "order": 1,
+      "name": "订单",
+      "visibility": "visible"
+    }
+  ],
+  "dataRegion": {
+    "orientation": "rows",
+    "headerRange": "订单!A1:E1",
+    "dataStartsAt": "订单!A2",
+    "headers": ["订单号", "客户编号", "数量", "单价", "状态"],
+    "columnTypes": ["text-id", "text-id", "finite-number", "finite-number", "text"]
+  },
+  "keys": {
+    "unique": ["订单号"],
+    "foreign": [{ "field": "客户编号", "references": "customers-source.客户编号" }]
+  },
+  "formulas": [],
+  "mergedCells": [],
+  "hiddenRows": [],
+  "hiddenColumns": [],
+  "namedRanges": [],
+  "drawings": [],
+  "allowedVariance": ["file-name", "record-count", "data-values", "column-widths", "cell-styles"]
+}

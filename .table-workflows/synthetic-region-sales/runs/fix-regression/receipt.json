@@ -1,0 +1,76 @@
+{
+  "schemaVersion": "0.1",
+  "workflowId": "synthetic-region-sales",
+  "workflowVersion": 2,
+  "startedAt": "2026-09-04T10:08:22.114Z",
+  "completedAt": "2026-09-04T10:08:23.526Z",
+  "exitStatus": "PASS",
+  "exitCode": 0,
+  "implementationArtifacts": {
+    "versions/v0002/run.mjs": "5f6ed285062e75a74ebc942b4f856ec3d6c09c1db6116b6dd51ffc0046d84323",
+    "versions/v0002/inspect_structure.py": "58712ea2d04b12b5d72e76bf01a1fbe27cedbc3f011b28ba0beb4a1e11772191",
+    "versions/v0002/dependency-lock.json": "b4de544105027325cb5e58f3999144cc533575a0d9395777182f9a30fda7c089",
+    "versions/v0002/structure/orders-input.json": "4da470b9d994451b2aa2e5a6235b02d343851751bea0de68d7288364948fa28a",
+    "versions/v0002/structure/customers-input.json": "3f062e1f90914f0fa2131df301faaa555448f29885859cc3d24a4cee4ac1364b",
+    "versions/v0002/structure/target-output.json": "8ed62dd08c5991b7cbbeae92dbd61a3c624ee36a7b3576ded1ebba3b5f6b682f"
+  },
+  "dependencyVersions": {
+    "node": "v24.19.0",
+    "artifactTool": "2.8.59",
+    "python": "3.12.14",
+    "openpyxl": "3.1.5"
+  },
+  "inputFiles": {
+    "customers-source": {
+      "path": "/Users/lch/Desktop/project/table-workflows/.table-workflows/synthetic-region-sales/cases/discovery-001/inputs/customers.xlsx",
+      "sha256Before": "b156096cd101aa54efbf001e019392964c46d25bb327a2d12206673f44020e01",
+      "sha256After": "b156096cd101aa54efbf001e019392964c46d25bb327a2d12206673f44020e01",
+      "structureFingerprint": {
+        "algorithm": "sha256",
+        "expected": "434c71d1759496a16e8b83123ee9f86d04f210ab3df05e19915512477dae350c",
+        "observed": "434c71d1759496a16e8b83123ee9f86d04f210ab3df05e19915512477dae350c",
+        "matches": true,
+        "basis": "versions/v0002/structure/customers-input.json"
+      }
+    },
+    "orders-source": {
+      "path": "/Users/lch/Desktop/project/table-workflows/.table-workflows/synthetic-region-sales/cases/discovery-001/inputs/orders.xlsx",
+      "sha256Before": "59f902e9be00c90abfa970ef5c8ceb85331ced8dd1ba0e90d4289058caafc656",
+      "sha256After": "59f902e9be00c90abfa970ef5c8ceb85331ced8dd1ba0e90d4289058caafc656",
+      "structureFingerprint": {
+        "algorithm": "sha256",
+        "expected": "81d29e676dfb51555b7fcbb684b4e51d40857c1d8fa4560103a6b29c1c9b2ba6",
+        "observed": "81d29e676dfb51555b7fcbb684b4e51d40857c1d8fa4560103a6b29c1c9b2ba6",
+        "matches": true,
+        "basis": "versions/v0002/structure/orders-input.json"
+      }
+    }
+  },
+  "targetTemplate": null,
+  "targetStructure": {
+    "algorithm": "sha256",
+    "expected": "4a7ba858f4ef2ef7d2fc052405b2be6cf5e2e12ff2d7ae048aebf95799f49653",
+    "observed": "4a7ba858f4ef2ef7d2fc052405b2be6cf5e2e12ff2d7ae048aebf95799f49653",
+    "matches": true,
+    "basis": "versions/v0002/structure/target-output.json"
+  },
+  "output": {
+    "path": "/Users/lch/Desktop/project/table-workflows/.table-workflows/synthetic-region-sales/outputs/fix-regression/result-v2.xlsx",
+    "sha256": "4b326c2c7456238da157bd31d2e04fceca233941b46b3ee78b8ae420f74f0959"
+  },
+  "checks": {
+    "blocking": [],
+    "warnings": [],
+    "exceptions": 0
+  },
+  "oneTimeManualEdits": [],
+  "metrics": {
+    "sourceOrders": 6,
+    "sourceCustomers": 5,
+    "completedOrderCount": 4,
+    "completedQuantity": 9,
+    "completedSales": 571,
+    "outputRows": 2
+  },
+  "unmatchedRecords": []
+}

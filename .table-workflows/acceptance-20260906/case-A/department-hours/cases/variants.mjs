@@ -1,0 +1,14 @@
+import fs from 'node:fs/promises';
+import {FileBlob,SpreadsheetFile} from '@oai/artifact-tool';
+const base = new URL('../../',import.meta.url).pathname;
+const out = new URL('./structure-tests/',import.meta.url).pathname;
+await fs.mkdir(out,{recursive:true});
+const wb=await SpreadsheetFile.importXlsx(await FileBlob.load(`${base}inbox/source.xlsx`));
+const sh=wb.worksheets.getItem('工时明细');
+sh.getRange('C2').values=[[-3]];
+sh.getRange('A6:D6').copyFrom(sh.getRange('A2:D2'),'all');
+sh.getRange('A6:D6').values=[['R05','D03',0,'已确认']];
+await (await SpreadsheetFile.exportXlsx(wb)).save(`${out}ordinary-change.xlsx`);
+const drift=await SpreadsheetFile.importXlsx(await FileBlob.load(`${base}inbox/source.xlsx`));
+drift.worksheets.getItem('工时明细').mergeCells('A6:B6');
+await (await SpreadsheetFile.exportXlsx(drift)).save(`${out}merge-drift.xlsx`);

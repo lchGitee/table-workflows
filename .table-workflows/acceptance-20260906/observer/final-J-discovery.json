@@ -1,0 +1,20 @@
+{
+  "case": "J",
+  "phase": "discovery",
+  "output": ".table-workflows/acceptance-20260906/case-J/order-ownership/runs/history/result.xlsx",
+  "pass": true,
+  "formulaCalculationVerified": true,
+  "completionStatus": "PASS",
+  "checkedCells": 20,
+  "diffs": [],
+  "missingFormulaCache": [],
+  "expectedTotals": {
+    "rows": 3,
+    "amount": 230,
+    "exceptions": 0
+  },
+  "actualTotals": {
+    "rows": 3,
+    "amount": 230
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "manifests": [
+    {
+      "case": "J",
+      "manifest": "case-J/order-ownership/manifest.json",
+      "schemaErrors": [],
+      "artifactHashes": {
+        "versions/v0001/run.py": true,
+        "versions/v0001/structure.py": true,
+        "versions/v0001/render.mjs": true,
+        "versions/v0001/dependencies.lock.json": true,
+        "versions/v0001/structure/source.json": true,
+        "versions/v0001/structure/target.json": true
+      },
+      "versionSnapshotMatches": {
+        "workflowId": true,
+        "version": true,
+        "implementation": true,
+        "inputSlots": true,
+        "target": true,
+        "parameters": true
+      },
+      "status": "TRIAL",
+      "defaultDirectory": false
+    },
+    {
+      "case": "A",
+      "manifest": "case-A/department-hours/manifest.json",
+      "schemaErrors": [],
+      "artifactHashes": {
+        "versions/v0001/run.py": true,
+        "versions/v0001/structure.py": true,
+        "versions/v0001/author.mjs": true,
+        "versions/v0001/dependencies.lock.json": true,
+        "versions/v0001/structure/source.json": true,
+        "versions/v0001/structure/target.json": true
+      },
+      "versionSnapshotMatches": {
+        "workflowId": true,
+        "version": true,
+        "implementation": true,
+        "inputSlots": true,
+        "target": true,
+        "parameters": true
+      },
+      "status": "TRIAL",
+      "defaultDirectory": false
+    },
+    {
+      "case": "T",
+      "manifest": "case-T/service-plan/manifest.json",
+      "schemaErrors": [],
+      "artifactHashes": {
+        "versions/v0001/dependencies.lock.json": true,
+        "versions/v0001/run.py": true,
+        "versions/v0001/structure/source.json": true,
+        "versions/v0001/structure/template.json": true,
+        "versions/v0001/structure.py": true,
+        "versions/v0001/write.mjs": true
+      },
+      "versionSnapshotMatches": {
+        "workflowId": true,
+        "version": true,
+        "implementation": true,
+        "inputSlots": true,
+        "target": true,
+        "parameters": true
+      },
+      "status": "TRIAL",
+      "defaultDirectory": false
+    }
+  ],
+  "fixtureHashesUnchanged": {
+    "fixtures/J/discovery/source.xlsx": true,
+    "fixtures/J/discovery/expected.xlsx": true,
+    "private/J/holdout/source.xlsx": true,
+    "private/J/holdout/expected.xlsx": true,
+    "private/J/anomaly-duplicate/source.xlsx": true,
+    "private/J/anomaly-unknown/source.xlsx": true,
+    "fixtures/A/discovery/source.xlsx": true,
+    "fixtures/A/discovery/expected.xlsx": true,
+    "private/A/holdout/source.xlsx": true,
+    "private/A/holdout/expected.xlsx": true,
+    "private/A/anomaly-duplicate/source.xlsx": true,
+    "private/A/anomaly-unknown/source.xlsx": true,
+    "fixtures/T/discovery/source.xlsx": true,
+    "fixtures/T/discovery/expected.xlsx": true,
+    "private/T/holdout/source.xlsx": true,
+    "private/T/holdout/expected.xlsx": true,
+    "private/T/anomaly-unknown/source.xlsx": true,
+    "private/T/anomaly-duplicate/source.xlsx": true,
+    "fixtures/T/discovery/template.xlsx": true
+  },
+  "originalSkillAndPriorBundleUnchanged": true,
+  "changedOriginals": [],
+  "publishedFilesUnchanged": {
+    "versions-before-T.json": true,
+    "versions-before-JA.json": true
+  }
+}

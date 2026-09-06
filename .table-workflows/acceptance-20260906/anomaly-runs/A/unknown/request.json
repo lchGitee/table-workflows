@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "0.1",
+  "workflowId": "department-hours",
+  "workflowVersion": 1,
+  "inputs": {
+    "source": [
+      "/Users/lch/Desktop/project/table-workflows/.table-workflows/acceptance-20260906/private/A/anomaly-unknown/source.xlsx"
+    ]
+  },
+  "outputPath": "/Users/lch/Desktop/project/table-workflows/.table-workflows/acceptance-20260906/anomaly-runs/A/unknown/result.xlsx",
+  "parameters": {},
+  "targetTemplatePath": "/Users/lch/Desktop/project/table-workflows/.table-workflows/acceptance-20260906/case-A/department-hours/templates/result.xlsx"
+}

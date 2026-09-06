@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "0.1",
+  "workflowId": "department-hours",
+  "workflowVersion": 1,
+  "inputs": {
+    "source": [
+      "/Users/lch/Desktop/project/table-workflows/.table-workflows/acceptance-20260906/case-A/department-hours/cases/structure-tests/merge-drift.xlsx"
+    ]
+  },
+  "targetTemplatePath": "/Users/lch/Desktop/project/table-workflows/.table-workflows/acceptance-20260906/case-A/department-hours/templates/result.xlsx",
+  "outputPath": "/Users/lch/Desktop/project/table-workflows/.table-workflows/acceptance-20260906/case-A/department-hours/runs/merge-drift/result.xlsx",
+  "parameters": {}
+}

@@ -1,0 +1,652 @@
+{
+  "cases": [
+    {
+      "case": "baseline",
+      "expected": [
+        [
+          "仓库代码",
+          "发货件数"
+        ],
+        [
+          "W01",
+          12
+        ],
+        [
+          "W02",
+          1
+        ],
+        [
+          "W03",
+          7
+        ]
+      ],
+      "exitCode": 0,
+      "outputExists": true,
+      "actual": [
+        {
+          "A1": "仓库代码",
+          "B1": "发货件数",
+          "A2": "W01",
+          "B2": 12.0,
+          "A3": "W02",
+          "B3": 1.0,
+          "A4": "W03",
+          "B4": 7.0
+        }
+      ],
+      "passed": true,
+      "receipt": {
+        "workflowId": "monthly-shipped",
+        "workflowVersion": 3,
+        "startedAt": "2026-09-06T01:46:09.681231+00:00",
+        "exitStatus": 0,
+        "observedStructures": [
+          {
+            "path": "/Users/lch/Desktop/project/table-workflows/.table-workflows/behavior-eval-20260905/private/fixtures/next-batch.xlsx",
+            "fingerprint": "1333622062c8552f9326f1f444fe89ad49041563cd9e2b65df000ad4a76ef47e",
+            "expected": "1333622062c8552f9326f1f444fe89ad49041563cd9e2b65df000ad4a76ef47e",
+            "match": true
+          }
+        ],
+        "warnings": [],
+        "exceptionCount": 0,
+        "manualChanges": [],
+        "outputPath": "/Users/lch/Desktop/project/table-workflows/.table-workflows/acceptance-20260906/reuse/baseline/.table-workflows/monthly-shipped/result.xlsx",
+        "artifacts": [
+          {
+            "path": "versions/v0003/run.py",
+            "kind": "SCRIPT",
+            "sha256": "85fc163d3359f11fd29bba7ef631553dc6daf6fbee783cd0dae582e63614864a"
+          },
+          {
+            "path": "versions/v0003/render.mjs",
+            "kind": "SCRIPT",
+            "sha256": "d28b973c780e43cfc3feedf0b7068acc4cfdca236e401b38ecc1928b4d94c21a"
+          },
+          {
+            "path": "versions/v0003/dependencies.lock.json",
+            "kind": "DEPENDENCY_LOCK",
+            "sha256": "24948a0e3eaa6e9d1bf27d5c53b832053d36539d6ae4b30c52ae7d0016d8dc9e"
+          },
+          {
+            "path": "versions/v0003/structure/orders.json",
+            "kind": "STRUCTURE_CONTRACT",
+            "sha256": "d0d55d7877d1a1c683beb38fd521bfe4cd50a5c658f852df8d08310e017c4b5a"
+          },
+          {
+            "path": "versions/v0003/structure/expected-result.json",
+            "kind": "STRUCTURE_CONTRACT",
+            "sha256": "01e930c67334e33a47144794774f416f907b3de8ee80d22d613ccf7cf03097a0"
+          }
+        ],
+        "inputHashes": {
+          "/Users/lch/Desktop/project/table-workflows/.table-workflows/behavior-eval-20260905/private/fixtures/next-batch.xlsx": "fd684709bcee96de48bed42e44c461b70e9e8c6cafd9b8905fb9f2aea4eac531"
+        },
+        "outputStructure": {
+          "fingerprint": "1949f47454959015a37527ecf2903d188b10d9d9b570dd5939e5cbf53732af89",
+          "expected": "1949f47454959015a37527ecf2903d188b10d9d9b570dd5939e5cbf53732af89",
+          "match": true
+        },
+        "checks": {
+          "shipment-or-paid-pending": "PASS",
+          "unique-order": "PASS",
+          "balanced-total": "PASS",
+          "output-structure": "PASS",
+          "protected-scopes": "N/A: GENERATED target"
+        },
+        "outputHash": "2ba41201dafd4c921ecc97633a25fc2b929cb199cdf780e538c6cf42d3beb8d0",
+        "inputRecords": 5,
+        "includedRecords": 4,
+        "excludedRecords": 1,
+        "unmatchedRecords": 0,
+        "outputRecords": 3,
+        "includedTotal": 20,
+        "reopened": true,
+        "finishedAt": "2026-09-06T01:46:10.819252+00:00",
+        "outputExists": true
+      },
+      "inputHash": "fd684709bcee96de48bed42e44c461b70e9e8c6cafd9b8905fb9f2aea4eac531"
+    },
+    {
+      "case": "reexport",
+      "expected": [
+        [
+          "仓库代码",
+          "发货件数"
+        ],
+        [
+          "W01",
+          12
+        ],
+        [
+          "W02",
+          1
+        ],
+        [
+          "W03",
+          7
+        ]
+      ],
+      "exitCode": 0,
+      "outputExists": true,
+      "actual": [
+        {
+          "A1": "仓库代码",
+          "B1": "发货件数",
+          "A2": "W01",
+          "B2": 12.0,
+          "A3": "W02",
+          "B3": 1.0,
+          "A4": "W03",
+          "B4": 7.0
+        }
+      ],
+      "passed": true,
+      "receipt": {
+        "workflowId": "monthly-shipped",
+        "workflowVersion": 3,
+        "startedAt": "2026-09-06T01:46:10.885006+00:00",
+        "exitStatus": 0,
+        "observedStructures": [
+          {
+            "path": "/Users/lch/Desktop/project/table-workflows/.table-workflows/acceptance-20260906/reuse/inputs/reexport.xlsx",
+            "fingerprint": "1333622062c8552f9326f1f444fe89ad49041563cd9e2b65df000ad4a76ef47e",
+            "expected": "1333622062c8552f9326f1f444fe89ad49041563cd9e2b65df000ad4a76ef47e",
+            "match": true
+          }
+        ],
+        "warnings": [],
+        "exceptionCount": 0,
+        "manualChanges": [],
+        "outputPath": "/Users/lch/Desktop/project/table-workflows/.table-workflows/acceptance-20260906/reuse/reexport/.table-workflows/monthly-shipped/result.xlsx",
+        "artifacts": [
+          {
+            "path": "versions/v0003/run.py",
+            "kind": "SCRIPT",
+            "sha256": "85fc163d3359f11fd29bba7ef631553dc6daf6fbee783cd0dae582e63614864a"
+          },
+          {
+            "path": "versions/v0003/render.mjs",
+            "kind": "SCRIPT",
+            "sha256": "d28b973c780e43cfc3feedf0b7068acc4cfdca236e401b38ecc1928b4d94c21a"
+          },
+          {
+            "path": "versions/v0003/dependencies.lock.json",
+            "kind": "DEPENDENCY_LOCK",
+            "sha256": "24948a0e3eaa6e9d1bf27d5c53b832053d36539d6ae4b30c52ae7d0016d8dc9e"
+          },
+          {
+            "path": "versions/v0003/structure/orders.json",
+            "kind": "STRUCTURE_CONTRACT",
+            "sha256": "d0d55d7877d1a1c683beb38fd521bfe4cd50a5c658f852df8d08310e017c4b5a"
+          },
+          {
+            "path": "versions/v0003/structure/expected-result.json",
+            "kind": "STRUCTURE_CONTRACT",
+            "sha256": "01e930c67334e33a47144794774f416f907b3de8ee80d22d613ccf7cf03097a0"
+          }
+        ],
+        "inputHashes": {
+          "/Users/lch/Desktop/project/table-workflows/.table-workflows/acceptance-20260906/reuse/inputs/reexport.xlsx": "74fc83a5ec5508809f7705d665c7f276eacd6cf43736075e0738d049f0e5eca9"
+        },
+        "outputStructure": {
+          "fingerprint": "1949f47454959015a37527ecf2903d188b10d9d9b570dd5939e5cbf53732af89",
+          "expected": "1949f47454959015a37527ecf2903d188b10d9d9b570dd5939e5cbf53732af89",
+          "match": true
+        },
+        "checks": {
+          "shipment-or-paid-pending": "PASS",
+          "unique-order": "PASS",
+          "balanced-total": "PASS",
+          "output-structure": "PASS",
+          "protected-scopes": "N/A: GENERATED target"
+        },
+        "outputHash": "a6ccf8312c63562fa40bd937f71f174c263b6438ec1b7c2451abae58b843a7cc",
+        "inputRecords": 5,
+        "includedRecords": 4,
+        "excludedRecords": 1,
+        "unmatchedRecords": 0,
+        "outputRecords": 3,
+        "includedTotal": 20,
+        "reopened": true,
+        "finishedAt": "2026-09-06T01:46:11.672124+00:00",
+        "outputExists": true
+      },
+      "inputHash": "74fc83a5ec5508809f7705d665c7f276eacd6cf43736075e0738d049f0e5eca9"
+    },
+    {
+      "case": "reordered",
+      "expected": [
+        [
+          "仓库代码",
+          "发货件数"
+        ],
+        [
+          "W01",
+          12
+        ],
+        [
+          "W02",
+          1
+        ],
+        [
+          "W03",
+          7
+        ]
+      ],
+      "exitCode": 0,
+      "outputExists": true,
+      "actual": [
+        {
+          "A1": "仓库代码",
+          "B1": "发货件数",
+          "A2": "W01",
+          "B2": 12.0,
+          "A3": "W02",
+          "B3": 1.0,
+          "A4": "W03",
+          "B4": 7.0
+        }
+      ],
+      "passed": true,
+      "receipt": {
+        "workflowId": "monthly-shipped",
+        "workflowVersion": 3,
+        "startedAt": "2026-09-06T01:46:11.735912+00:00",
+        "exitStatus": 0,
+        "observedStructures": [
+          {
+            "path": "/Users/lch/Desktop/project/table-workflows/.table-workflows/acceptance-20260906/reuse/inputs/reordered.xlsx",
+            "fingerprint": "1333622062c8552f9326f1f444fe89ad49041563cd9e2b65df000ad4a76ef47e",
+            "expected": "1333622062c8552f9326f1f444fe89ad49041563cd9e2b65df000ad4a76ef47e",
+            "match": true
+          }
+        ],
+        "warnings": [],
+        "exceptionCount": 0,
+        "manualChanges": [],
+        "outputPath": "/Users/lch/Desktop/project/table-workflows/.table-workflows/acceptance-20260906/reuse/reordered/.table-workflows/monthly-shipped/result.xlsx",
+        "artifacts": [
+          {
+            "path": "versions/v0003/run.py",
+            "kind": "SCRIPT",
+            "sha256": "85fc163d3359f11fd29bba7ef631553dc6daf6fbee783cd0dae582e63614864a"
+          },
+          {
+            "path": "versions/v0003/render.mjs",
+            "kind": "SCRIPT",
+            "sha256": "d28b973c780e43cfc3feedf0b7068acc4cfdca236e401b38ecc1928b4d94c21a"
+          },
+          {
+            "path": "versions/v0003/dependencies.lock.json",
+            "kind": "DEPENDENCY_LOCK",
+            "sha256": "24948a0e3eaa6e9d1bf27d5c53b832053d36539d6ae4b30c52ae7d0016d8dc9e"
+          },
+          {
+            "path": "versions/v0003/structure/orders.json",
+            "kind": "STRUCTURE_CONTRACT",
+            "sha256": "d0d55d7877d1a1c683beb38fd521bfe4cd50a5c658f852df8d08310e017c4b5a"
+          },
+          {
+            "path": "versions/v0003/structure/expected-result.json",
+            "kind": "STRUCTURE_CONTRACT",
+            "sha256": "01e930c67334e33a47144794774f416f907b3de8ee80d22d613ccf7cf03097a0"
+          }
+        ],
+        "inputHashes": {
+          "/Users/lch/Desktop/project/table-workflows/.table-workflows/acceptance-20260906/reuse/inputs/reordered.xlsx": "2ad9ca6ac9cae0cb7ebfa5f5c93f4586a72fabf1022ee07460833cf47b564f31"
+        },
+        "outputStructure": {
+          "fingerprint": "1949f47454959015a37527ecf2903d188b10d9d9b570dd5939e5cbf53732af89",
+          "expected": "1949f47454959015a37527ecf2903d188b10d9d9b570dd5939e5cbf53732af89",
+          "match": true
+        },
+        "checks": {
+          "shipment-or-paid-pending": "PASS",
+          "unique-order": "PASS",
+          "balanced-total": "PASS",
+          "output-structure": "PASS",
+          "protected-scopes": "N/A: GENERATED target"
+        },
+        "outputHash": "103912e1e696a25d27d42ca779eae6d2856645be5595ebb953cd3b6062a0748b",
+        "inputRecords": 5,
+        "includedRecords": 4,
+        "excludedRecords": 1,
+        "unmatchedRecords": 0,
+        "outputRecords": 3,
+        "includedTotal": 20,
+        "reopened": true,
+        "finishedAt": "2026-09-06T01:46:12.512602+00:00",
+        "outputExists": true
+      },
+      "inputHash": "2ad9ca6ac9cae0cb7ebfa5f5c93f4586a72fabf1022ee07460833cf47b564f31"
+    },
+    {
+      "case": "changed",
+      "expected": [
+        [
+          "仓库代码",
+          "发货件数"
+        ],
+        [
+          "W01",
+          3
+        ],
+        [
+          "W02",
+          12
+        ],
+        [
+          "W04",
+          8
+        ]
+      ],
+      "exitCode": 0,
+      "outputExists": true,
+      "actual": [
+        {
+          "A1": "仓库代码",
+          "B1": "发货件数",
+          "A2": "W01",
+          "B2": 3.0,
+          "A3": "W02",
+          "B3": 12.0,
+          "A4": "W04",
+          "B4": 8.0
+        }
+      ],
+      "passed": true,
+      "receipt": {
+        "workflowId": "monthly-shipped",
+        "workflowVersion": 3,
+        "startedAt": "2026-09-06T01:46:12.580785+00:00",
+        "exitStatus": 0,
+        "observedStructures": [
+          {
+            "path": "/Users/lch/Desktop/project/table-workflows/.table-workflows/acceptance-20260906/reuse/inputs/changed.xlsx",
+            "fingerprint": "1333622062c8552f9326f1f444fe89ad49041563cd9e2b65df000ad4a76ef47e",
+            "expected": "1333622062c8552f9326f1f444fe89ad49041563cd9e2b65df000ad4a76ef47e",
+            "match": true
+          }
+        ],
+        "warnings": [],
+        "exceptionCount": 0,
+        "manualChanges": [],
+        "outputPath": "/Users/lch/Desktop/project/table-workflows/.table-workflows/acceptance-20260906/reuse/changed/.table-workflows/monthly-shipped/result.xlsx",
+        "artifacts": [
+          {
+            "path": "versions/v0003/run.py",
+            "kind": "SCRIPT",
+            "sha256": "85fc163d3359f11fd29bba7ef631553dc6daf6fbee783cd0dae582e63614864a"
+          },
+          {
+            "path": "versions/v0003/render.mjs",
+            "kind": "SCRIPT",
+            "sha256": "d28b973c780e43cfc3feedf0b7068acc4cfdca236e401b38ecc1928b4d94c21a"
+          },
+          {
+            "path": "versions/v0003/dependencies.lock.json",
+            "kind": "DEPENDENCY_LOCK",
+            "sha256": "24948a0e3eaa6e9d1bf27d5c53b832053d36539d6ae4b30c52ae7d0016d8dc9e"
+          },
+          {
+            "path": "versions/v0003/structure/orders.json",
+            "kind": "STRUCTURE_CONTRACT",
+            "sha256": "d0d55d7877d1a1c683beb38fd521bfe4cd50a5c658f852df8d08310e017c4b5a"
+          },
+          {
+            "path": "versions/v0003/structure/expected-result.json",
+            "kind": "STRUCTURE_CONTRACT",
+            "sha256": "01e930c67334e33a47144794774f416f907b3de8ee80d22d613ccf7cf03097a0"
+          }
+        ],
+        "inputHashes": {
+          "/Users/lch/Desktop/project/table-workflows/.table-workflows/acceptance-20260906/reuse/inputs/changed.xlsx": "fa6e5f863c8cb8707f1518bda96e0787e59f2f64c0eb395c5d6c9e1bed18db5c"
+        },
+        "outputStructure": {
+          "fingerprint": "1949f47454959015a37527ecf2903d188b10d9d9b570dd5939e5cbf53732af89",
+          "expected": "1949f47454959015a37527ecf2903d188b10d9d9b570dd5939e5cbf53732af89",
+          "match": true
+        },
+        "checks": {
+          "shipment-or-paid-pending": "PASS",
+          "unique-order": "PASS",
+          "balanced-total": "PASS",
+          "output-structure": "PASS",
+          "protected-scopes": "N/A: GENERATED target"
+        },
+        "outputHash": "f28b30459f6448c27a0339cd308dc55ef64d1a4df55879031ac23af3f8794da3",
+        "inputRecords": 6,
+        "includedRecords": 5,
+        "excludedRecords": 1,
+        "unmatchedRecords": 0,
+        "outputRecords": 3,
+        "includedTotal": 23,
+        "reopened": true,
+        "finishedAt": "2026-09-06T01:46:13.376694+00:00",
+        "outputExists": true
+      },
+      "inputHash": "fa6e5f863c8cb8707f1518bda96e0787e59f2f64c0eb395c5d6c9e1bed18db5c"
+    },
+    {
+      "case": "merged",
+      "expected": "BLOCK",
+      "exitCode": 1,
+      "outputExists": false,
+      "actual": null,
+      "passed": true,
+      "receipt": {
+        "workflowId": "monthly-shipped",
+        "workflowVersion": 3,
+        "startedAt": "2026-09-06T01:46:13.443061+00:00",
+        "exitStatus": 1,
+        "observedStructures": [
+          {
+            "path": "/Users/lch/Desktop/project/table-workflows/.table-workflows/acceptance-20260906/reuse/inputs/merged.xlsx",
+            "fingerprint": "d4bb059eb7db2c473597173e08a0922bdaa27d7dc6c5c5885a5573a8b548f448",
+            "expected": "1333622062c8552f9326f1f444fe89ad49041563cd9e2b65df000ad4a76ef47e",
+            "match": false
+          }
+        ],
+        "warnings": [],
+        "exceptionCount": 1,
+        "manualChanges": [],
+        "outputPath": "/Users/lch/Desktop/project/table-workflows/.table-workflows/acceptance-20260906/reuse/merged/.table-workflows/monthly-shipped/result.xlsx",
+        "artifacts": [
+          {
+            "path": "versions/v0003/run.py",
+            "kind": "SCRIPT",
+            "sha256": "85fc163d3359f11fd29bba7ef631553dc6daf6fbee783cd0dae582e63614864a"
+          },
+          {
+            "path": "versions/v0003/render.mjs",
+            "kind": "SCRIPT",
+            "sha256": "d28b973c780e43cfc3feedf0b7068acc4cfdca236e401b38ecc1928b4d94c21a"
+          },
+          {
+            "path": "versions/v0003/dependencies.lock.json",
+            "kind": "DEPENDENCY_LOCK",
+            "sha256": "24948a0e3eaa6e9d1bf27d5c53b832053d36539d6ae4b30c52ae7d0016d8dc9e"
+          },
+          {
+            "path": "versions/v0003/structure/orders.json",
+            "kind": "STRUCTURE_CONTRACT",
+            "sha256": "d0d55d7877d1a1c683beb38fd521bfe4cd50a5c658f852df8d08310e017c4b5a"
+          },
+          {
+            "path": "versions/v0003/structure/expected-result.json",
+            "kind": "STRUCTURE_CONTRACT",
+            "sha256": "01e930c67334e33a47144794774f416f907b3de8ee80d22d613ccf7cf03097a0"
+          }
+        ],
+        "inputHashes": {
+          "/Users/lch/Desktop/project/table-workflows/.table-workflows/acceptance-20260906/reuse/inputs/merged.xlsx": "66049198cc9da62f930848d1935353316bf5cc70e4f72f88b3c9ec6eaeef2faf"
+        },
+        "blockingError": "原表结构已变化，请进入优化模式确认；未生成结果",
+        "finishedAt": "2026-09-06T01:46:13.610383+00:00",
+        "outputExists": false
+      },
+      "inputHash": "66049198cc9da62f930848d1935353316bf5cc70e4f72f88b3c9ec6eaeef2faf"
+    },
+    {
+      "case": "moved",
+      "expected": [
+        [
+          "仓库代码",
+          "发货件数"
+        ],
+        [
+          "W01",
+          12
+        ],
+        [
+          "W02",
+          1
+        ],
+        [
+          "W03",
+          7
+        ]
+      ],
+      "exitCode": 0,
+      "outputExists": true,
+      "actual": [
+        {
+          "A1": "仓库代码",
+          "B1": "发货件数",
+          "A2": "W01",
+          "B2": 12.0,
+          "A3": "W02",
+          "B3": 1.0,
+          "A4": "W03",
+          "B4": 7.0
+        }
+      ],
+      "passed": true,
+      "receipt": {
+        "workflowId": "monthly-shipped",
+        "workflowVersion": 3,
+        "startedAt": "2026-09-06T01:46:13.670213+00:00",
+        "exitStatus": 0,
+        "observedStructures": [
+          {
+            "path": "/Users/lch/Desktop/project/table-workflows/.table-workflows/behavior-eval-20260905/private/fixtures/next-batch.xlsx",
+            "fingerprint": "1333622062c8552f9326f1f444fe89ad49041563cd9e2b65df000ad4a76ef47e",
+            "expected": "1333622062c8552f9326f1f444fe89ad49041563cd9e2b65df000ad4a76ef47e",
+            "match": true
+          }
+        ],
+        "warnings": [],
+        "exceptionCount": 0,
+        "manualChanges": [],
+        "outputPath": "/Users/lch/Desktop/project/table-workflows/.table-workflows/acceptance-20260906/reuse/moved workspace/.table-workflows/monthly-shipped/result.xlsx",
+        "artifacts": [
+          {
+            "path": "versions/v0003/run.py",
+            "kind": "SCRIPT",
+            "sha256": "85fc163d3359f11fd29bba7ef631553dc6daf6fbee783cd0dae582e63614864a"
+          },
+          {
+            "path": "versions/v0003/render.mjs",
+            "kind": "SCRIPT",
+            "sha256": "d28b973c780e43cfc3feedf0b7068acc4cfdca236e401b38ecc1928b4d94c21a"
+          },
+          {
+            "path": "versions/v0003/dependencies.lock.json",
+            "kind": "DEPENDENCY_LOCK",
+            "sha256": "24948a0e3eaa6e9d1bf27d5c53b832053d36539d6ae4b30c52ae7d0016d8dc9e"
+          },
+          {
+            "path": "versions/v0003/structure/orders.json",
+            "kind": "STRUCTURE_CONTRACT",
+            "sha256": "d0d55d7877d1a1c683beb38fd521bfe4cd50a5c658f852df8d08310e017c4b5a"
+          },
+          {
+            "path": "versions/v0003/structure/expected-result.json",
+            "kind": "STRUCTURE_CONTRACT",
+            "sha256": "01e930c67334e33a47144794774f416f907b3de8ee80d22d613ccf7cf03097a0"
+          }
+        ],
+        "inputHashes": {
+          "/Users/lch/Desktop/project/table-workflows/.table-workflows/behavior-eval-20260905/private/fixtures/next-batch.xlsx": "fd684709bcee96de48bed42e44c461b70e9e8c6cafd9b8905fb9f2aea4eac531"
+        },
+        "outputStructure": {
+          "fingerprint": "1949f47454959015a37527ecf2903d188b10d9d9b570dd5939e5cbf53732af89",
+          "expected": "1949f47454959015a37527ecf2903d188b10d9d9b570dd5939e5cbf53732af89",
+          "match": true
+        },
+        "checks": {
+          "shipment-or-paid-pending": "PASS",
+          "unique-order": "PASS",
+          "balanced-total": "PASS",
+          "output-structure": "PASS",
+          "protected-scopes": "N/A: GENERATED target"
+        },
+        "outputHash": "1c5f0fcd26ef3b739866c800f45974d83cfa1d5c7c4c7326ff988eb02e882ff7",
+        "inputRecords": 5,
+        "includedRecords": 4,
+        "excludedRecords": 1,
+        "unmatchedRecords": 0,
+        "outputRecords": 3,
+        "includedTotal": 20,
+        "reopened": true,
+        "finishedAt": "2026-09-06T01:46:14.620604+00:00",
+        "outputExists": true
+      },
+      "inputHash": "fd684709bcee96de48bed42e44c461b70e9e8c6cafd9b8905fb9f2aea4eac531"
+    },
+    {
+      "case": "tampered",
+      "expected": "BLOCK",
+      "exitCode": 1,
+      "outputExists": false,
+      "actual": null,
+      "passed": true,
+      "receipt": {
+        "workflowId": "monthly-shipped",
+        "workflowVersion": 3,
+        "startedAt": "2026-09-06T01:46:14.681851+00:00",
+        "exitStatus": 1,
+        "observedStructures": [],
+        "warnings": [],
+        "exceptionCount": 1,
+        "manualChanges": [],
+        "outputPath": null,
+        "artifacts": [
+          {
+            "path": "versions/v0003/run.py",
+            "kind": "SCRIPT",
+            "sha256": "85fc163d3359f11fd29bba7ef631553dc6daf6fbee783cd0dae582e63614864a"
+          },
+          {
+            "path": "versions/v0003/render.mjs",
+            "kind": "SCRIPT",
+            "sha256": "d28b973c780e43cfc3feedf0b7068acc4cfdca236e401b38ecc1928b4d94c21a"
+          },
+          {
+            "path": "versions/v0003/dependencies.lock.json",
+            "kind": "DEPENDENCY_LOCK",
+            "sha256": "24948a0e3eaa6e9d1bf27d5c53b832053d36539d6ae4b30c52ae7d0016d8dc9e"
+          },
+          {
+            "path": "versions/v0003/structure/orders.json",
+            "kind": "STRUCTURE_CONTRACT",
+            "sha256": "d0d55d7877d1a1c683beb38fd521bfe4cd50a5c658f852df8d08310e017c4b5a"
+          },
+          {
+            "path": "versions/v0003/structure/expected-result.json",
+            "kind": "STRUCTURE_CONTRACT",
+            "sha256": "01e930c67334e33a47144794774f416f907b3de8ee80d22d613ccf7cf03097a0"
+          }
+        ],
+        "blockingError": "执行产物变化，需优化并验证新版本",
+        "finishedAt": "2026-09-06T01:46:14.682271+00:00",
+        "outputExists": false
+      },
+      "inputHash": "fd684709bcee96de48bed42e44c461b70e9e8c6cafd9b8905fb9f2aea4eac531"
+    }
+  ],
+  "originalFilesUnchanged": true,
+  "crossExporter": "NOT_RUN: no LibreOffice or Microsoft Excel found",
+  "scope": "same-host directory relocation; not clean-machine portability"
+}

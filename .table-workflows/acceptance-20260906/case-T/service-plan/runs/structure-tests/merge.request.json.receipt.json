@@ -1,0 +1,57 @@
+{
+  "workflowId": "service-plan",
+  "version": 1,
+  "startedAt": "2026-09-06T01:54:12.893768+00:00",
+  "observedStructures": [
+    {
+      "role": "source",
+      "path": "/Users/lch/Desktop/project/table-workflows/.table-workflows/acceptance-20260906/case-T/service-plan/runs/structure-tests/merge.xlsx",
+      "fingerprint": "265a76b10818d39654b0f6ced0c25e8cff87df60c21c29ad06ce4c82d8b76dbf",
+      "expected": "97edc5485c3d67700650c64465af6b55585c52fea1caf45f159e33fdce1157a2",
+      "match": false
+    }
+  ],
+  "warnings": [],
+  "exceptionCount": 1,
+  "manualEdits": [],
+  "implementationHashes": [
+    {
+      "path": "versions/v0001/dependencies.lock.json",
+      "kind": "DEPENDENCY_LOCK",
+      "sha256": "a88fa44c8767b03f6a6d7bf6a9c5b30669dcc9b6ab506e85f96e128501a5e84f"
+    },
+    {
+      "path": "versions/v0001/run.py",
+      "kind": "SCRIPT",
+      "sha256": "712bf1269782de218ccbde6d03e3dd32e8324eb75cdd56c8201c22b509da4286"
+    },
+    {
+      "path": "versions/v0001/structure/source.json",
+      "kind": "STRUCTURE_CONTRACT",
+      "sha256": "c09034fb8f7ab81a45bbef77b5bb112e7833b31fe9ebbf8fa4a77ab738191479"
+    },
+    {
+      "path": "versions/v0001/structure/template.json",
+      "kind": "STRUCTURE_CONTRACT",
+      "sha256": "63811ca2e02d33fe213a8da9ed6fca3138e698323ae7c383a2285f2d053f4cb7"
+    },
+    {
+      "path": "versions/v0001/structure.py",
+      "kind": "SCRIPT",
+      "sha256": "2208ebe8f5bdd959f8d22951fe81c1b448b65401ed57e83486447b63d24bd2fe"
+    },
+    {
+      "path": "versions/v0001/write.mjs",
+      "kind": "SCRIPT",
+      "sha256": "76df35b2bcd6c0d3cda5fc835785de6726ca34c75e0b6f4625dea9f2fc6861ea"
+    }
+  ],
+  "fileHashes": {
+    "source": "f30e2b8e446687e8dda3b4457803e2a4afe9dda78bb3fd256f96501f963f14e7",
+    "template": "c93dd73da8401f03c694cf434c383df7a394f912d6085cecfbb7650fb83df313"
+  },
+  "exitStatus": 1,
+  "blockingReason": "结构变化，请进入优化模式：source",
+  "outputProduced": false,
+  "finishedAt": "2026-09-06T01:54:12.976871+00:00"
+}

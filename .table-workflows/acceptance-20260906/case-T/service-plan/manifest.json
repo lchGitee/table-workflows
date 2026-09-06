@@ -1,0 +1,116 @@
+{
+  "schemaVersion": "0.1",
+  "workflowId": "service-plan",
+  "name": "服务计划回填",
+  "version": 1,
+  "status": "TRIAL",
+  "createdAt": "2026-09-06T01:53:23.095114+00:00",
+  "updatedAt": "2026-09-06T01:55:38.440084+00:00",
+  "parameters": [],
+  "inputSlots": [
+    {
+      "slotId": "source",
+      "label": "当批需求",
+      "required": true,
+      "multiple": false,
+      "acceptedExtensions": [
+        ".xlsx"
+      ],
+      "structureFingerprint": {
+        "algorithm": "sha256",
+        "value": "97edc5485c3d67700650c64465af6b55585c52fea1caf45f159e33fdce1157a2",
+        "basis": "versions/v0001/structure/source.json"
+      }
+    }
+  ],
+  "target": {
+    "mode": "SAVED_TEMPLATE",
+    "templatePath": "templates/template.xlsx",
+    "outputExtension": ".xlsx",
+    "structureFingerprint": {
+      "algorithm": "sha256",
+      "value": "2b3f3fae2ac135eee3cd3d4295f74b255b1be9874769e09f40879ff46922a7d6",
+      "basis": "versions/v0001/structure/template.json"
+    },
+    "writeScopes": [
+      "计划表!C4:C6"
+    ],
+    "protectedScopes": [
+      "计划表!A1:B9",
+      "计划表!D1:E9",
+      "计划表!C1:C3",
+      "计划表!C7:C9"
+    ],
+    "preserveUnlistedCells": true
+  },
+  "implementation": {
+    "kind": "SCRIPT",
+    "entrypoint": "versions/v0001/run.py",
+    "command": [
+      "/Users/lch/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "versions/v0001/run.py",
+      "--request",
+      "{request}"
+    ],
+    "runtime": "Python 标准库 + 锁定的 Node.js / @oai/artifact-tool",
+    "artifacts": [
+      {
+        "path": "versions/v0001/dependencies.lock.json",
+        "kind": "DEPENDENCY_LOCK",
+        "sha256": "a88fa44c8767b03f6a6d7bf6a9c5b30669dcc9b6ab506e85f96e128501a5e84f"
+      },
+      {
+        "path": "versions/v0001/run.py",
+        "kind": "SCRIPT",
+        "sha256": "712bf1269782de218ccbde6d03e3dd32e8324eb75cdd56c8201c22b509da4286"
+      },
+      {
+        "path": "versions/v0001/structure/source.json",
+        "kind": "STRUCTURE_CONTRACT",
+        "sha256": "c09034fb8f7ab81a45bbef77b5bb112e7833b31fe9ebbf8fa4a77ab738191479"
+      },
+      {
+        "path": "versions/v0001/structure/template.json",
+        "kind": "STRUCTURE_CONTRACT",
+        "sha256": "63811ca2e02d33fe213a8da9ed6fca3138e698323ae7c383a2285f2d053f4cb7"
+      },
+      {
+        "path": "versions/v0001/structure.py",
+        "kind": "SCRIPT",
+        "sha256": "2208ebe8f5bdd959f8d22951fe81c1b448b65401ed57e83486447b63d24bd2fe"
+      },
+      {
+        "path": "versions/v0001/write.mjs",
+        "kind": "SCRIPT",
+        "sha256": "76df35b2bcd6c0d3cda5fc835785de6726ca34c75e0b6f4625dea9f2fc6861ea"
+      }
+    ]
+  },
+  "validation": {
+    "goldCases": [
+      {
+        "caseId": "historical",
+        "storage": "REPLAYABLE",
+        "requestPath": "runs/history/request.json",
+        "expectedResultPath": "cases/historical/expected.xlsx",
+        "result": "PASS",
+        "usedForDiscovery": true,
+        "lastRunAt": "2026-09-06T01:55:38.440084+00:00",
+        "acceptedDifferenceCount": 0
+      }
+    ],
+    "invariants": [
+      {
+        "id": "unique-known-code",
+        "description": "重复编码或未知项目阻断",
+        "severity": "BLOCK"
+      },
+      {
+        "id": "quantity-sum",
+        "description": "输出数量合计等于当批源表数量合计，缺失需求填零",
+        "severity": "BLOCK"
+      }
+    ],
+    "lastValidatedAt": "2026-09-06T01:55:38.440084+00:00"
+  }
+}

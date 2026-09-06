@@ -1,0 +1,44 @@
+{
+  "file": "/Users/lch/Desktop/project/table-workflows/.table-workflows/behavior-eval-20260905/s2/.table-workflows/monthly-shipped/runs/本月仓库发货汇总-v0003.xlsx",
+  "oracleKey": "heldoutV2",
+  "actual": [
+    [
+      [
+        "仓库代码",
+        "发货件数"
+      ],
+      [
+        "W01",
+        12.0
+      ],
+      [
+        "W02",
+        1.0
+      ],
+      [
+        "W03",
+        7.0
+      ]
+    ]
+  ],
+  "expected": [
+    [
+      "仓库代码",
+      "发货件数"
+    ],
+    [
+      "W01",
+      12
+    ],
+    [
+      "W02",
+      1
+    ],
+    [
+      "W03",
+      7
+    ]
+  ],
+  "exactMatch": true,
+  "sha256": "a055722ce7aec4dbf3099b92b233f3c9f51bff18971d86362b04723f5082cd7f"
+}

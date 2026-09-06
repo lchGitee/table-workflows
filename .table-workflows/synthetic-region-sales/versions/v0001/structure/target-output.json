@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "0.1",
+  "role": "generated-target",
+  "fileType": ".xlsx",
+  "worksheets": [
+    {
+      "order": 1,
+      "name": "区域汇总",
+      "visibility": "visible"
+    }
+  ],
+  "writeScope": "区域汇总!A1:D*",
+  "dataRegion": {
+    "orientation": "rows",
+    "headerRange": "区域汇总!A1:D1",
+    "dataStartsAt": "区域汇总!A2",
+    "headers": ["区域", "完成订单数", "完成件数", "销售额"],
+    "columnTypes": ["text", "integer", "number", "currency-2dp"]
+  },
+  "sort": [
+    { "field": "销售额", "direction": "descending" },
+    { "field": "区域", "direction": "ascending" }
+  ],
+  "formulas": [],
+  "mergedCells": [],
+  "namedRanges": [],
+  "drawings": [],
+  "protectedScopes": [],
+  "allowedVariance": ["record-count", "data-values-derived-from-input"]
+}

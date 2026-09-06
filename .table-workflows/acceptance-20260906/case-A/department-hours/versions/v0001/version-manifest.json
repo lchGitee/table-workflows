@@ -1,0 +1,114 @@
+{
+  "schemaVersion": "0.1",
+  "workflowId": "department-hours",
+  "name": "部门工时汇总",
+  "version": 1,
+  "status": "TRIAL",
+  "createdAt": "2026-09-06T01:51:59.636648+00:00",
+  "updatedAt": "2026-09-06T01:54:25.258315+00:00",
+  "inputSlots": [
+    {
+      "slotId": "source",
+      "label": "当批工时明细",
+      "required": true,
+      "multiple": false,
+      "acceptedExtensions": [
+        ".xlsx"
+      ],
+      "structureFingerprint": {
+        "algorithm": "sha256",
+        "value": "f9c7b6ecc570814a681b85876c3809961d335864e79c9fe4fea36b9b1e6799ea",
+        "basis": "versions/v0001/structure/source.json"
+      }
+    }
+  ],
+  "target": {
+    "mode": "SAVED_TEMPLATE",
+    "templatePath": "templates/result.xlsx",
+    "structureFingerprint": {
+      "algorithm": "sha256",
+      "value": "7e9f33cb56a4fec5caabf28a1c484d7df4f49415b79b3bd8e5fe12898a54b03d",
+      "basis": "versions/v0001/structure/target.json"
+    },
+    "outputExtension": ".xlsx",
+    "writeScopes": [
+      "部门汇总!A2:C1048576"
+    ],
+    "protectedScopes": [
+      "部门汇总!A1:C1"
+    ],
+    "preserveUnlistedCells": true
+  },
+  "implementation": {
+    "kind": "SCRIPT",
+    "entrypoint": "versions/v0001/run.py",
+    "command": [
+      "/Users/lch/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "versions/v0001/run.py",
+      "--request",
+      "{request}"
+    ],
+    "runtime": "Python 标准库读取与校验；bundled Node.js + @oai/artifact-tool 生成工作簿",
+    "artifacts": [
+      {
+        "path": "versions/v0001/run.py",
+        "kind": "SCRIPT",
+        "sha256": "b05a368794c7bac954da47fcb511a4c3014033e35094f9c0c578a3534b5268a9"
+      },
+      {
+        "path": "versions/v0001/structure.py",
+        "kind": "SCRIPT",
+        "sha256": "3ec3c7e1a0b2c99a4af3782cd593015e19e00750f9a489fa7772a0b4dcedb99c"
+      },
+      {
+        "path": "versions/v0001/author.mjs",
+        "kind": "SCRIPT",
+        "sha256": "4174247a7f5f8e2a79e7512c98ad5da814266309d9c25e6154db89a9257c2851"
+      },
+      {
+        "path": "versions/v0001/dependencies.lock.json",
+        "kind": "DEPENDENCY_LOCK",
+        "sha256": "bdf82a3c55117f302e22045760aee457b02e77cae852edf158fb0ec6d042e7b3"
+      },
+      {
+        "path": "versions/v0001/structure/source.json",
+        "kind": "STRUCTURE_CONTRACT",
+        "sha256": "6e984c86b9e07447b0e64fa5cb3928b7276aea95aa55d1cf104d74c47542c6fe"
+      },
+      {
+        "path": "versions/v0001/structure/target.json",
+        "kind": "STRUCTURE_CONTRACT",
+        "sha256": "bcc56d29dcce2dfa63e07c8011fba547ae17bf514873461d4e1b09d46e677359"
+      }
+    ]
+  },
+  "parameters": [],
+  "validation": {
+    "goldCases": [
+      {
+        "caseId": "initial",
+        "storage": "REPLAYABLE",
+        "requestPath": "cases/initial/request.json",
+        "expectedResultPath": "/Users/lch/Desktop/project/table-workflows/.table-workflows/acceptance-20260906/case-A/inbox/expected.xlsx",
+        "result": "PASS",
+        "usedForDiscovery": true,
+        "lastRunAt": "2026-09-06T01:54:25.258315+00:00",
+        "acceptedDifferenceCount": 0
+      }
+    ],
+    "invariants": [
+      {
+        "id": "status-policy",
+        "description": "只统计已确认，保留负数和零；未知状态阻断",
+        "severity": "BLOCK"
+      },
+      {
+        "id": "balance",
+        "description": "净工时等于全部已确认记录工时之和；有效记录数逐行计数",
+        "severity": "BLOCK"
+      }
+    ],
+    "lastValidatedAt": "2026-09-06T01:54:25.258315+00:00"
+  },
+  "changeSummary": "初始版本：按用户确认的状态政策汇总，历史回放与实际结构负例通过，待独立批次验证。"
+}

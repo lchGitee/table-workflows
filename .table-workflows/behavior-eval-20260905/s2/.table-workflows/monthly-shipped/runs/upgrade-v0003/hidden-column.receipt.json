@@ -1,0 +1,51 @@
+{
+  "workflowId": "monthly-shipped",
+  "workflowVersion": 3,
+  "startedAt": "2026-09-05T10:10:20.035115+00:00",
+  "exitStatus": 1,
+  "observedStructures": [
+    {
+      "path": "/Users/lch/Desktop/project/table-workflows/.table-workflows/behavior-eval-20260905/s2/.table-workflows/monthly-shipped/runs/fixtures/hidden-column.xlsx",
+      "fingerprint": "ed42c1227adb167671c396e0fbc0d2b0a3614ecc33ddda70087a3bedc60446d4",
+      "expected": "1333622062c8552f9326f1f444fe89ad49041563cd9e2b65df000ad4a76ef47e",
+      "match": false
+    }
+  ],
+  "warnings": [],
+  "exceptionCount": 1,
+  "manualChanges": [],
+  "outputPath": "/Users/lch/Desktop/project/table-workflows/.table-workflows/behavior-eval-20260905/s2/.table-workflows/monthly-shipped/runs/upgrade-v0003/hidden-column-result.xlsx",
+  "artifacts": [
+    {
+      "path": "versions/v0003/run.py",
+      "kind": "SCRIPT",
+      "sha256": "85fc163d3359f11fd29bba7ef631553dc6daf6fbee783cd0dae582e63614864a"
+    },
+    {
+      "path": "versions/v0003/render.mjs",
+      "kind": "SCRIPT",
+      "sha256": "d28b973c780e43cfc3feedf0b7068acc4cfdca236e401b38ecc1928b4d94c21a"
+    },
+    {
+      "path": "versions/v0003/dependencies.lock.json",
+      "kind": "DEPENDENCY_LOCK",
+      "sha256": "24948a0e3eaa6e9d1bf27d5c53b832053d36539d6ae4b30c52ae7d0016d8dc9e"
+    },
+    {
+      "path": "versions/v0003/structure/orders.json",
+      "kind": "STRUCTURE_CONTRACT",
+      "sha256": "d0d55d7877d1a1c683beb38fd521bfe4cd50a5c658f852df8d08310e017c4b5a"
+    },
+    {
+      "path": "versions/v0003/structure/expected-result.json",
+      "kind": "STRUCTURE_CONTRACT",
+      "sha256": "01e930c67334e33a47144794774f416f907b3de8ee80d22d613ccf7cf03097a0"
+    }
+  ],
+  "inputHashes": {
+    "/Users/lch/Desktop/project/table-workflows/.table-workflows/behavior-eval-20260905/s2/.table-workflows/monthly-shipped/runs/fixtures/hidden-column.xlsx": "ff1f7331e7f51ece85736de22062a26fc929c1dd30f9c14c839defac9f707dd6"
+  },
+  "blockingError": "原表结构已变化，请进入优化模式确认；未生成结果",
+  "finishedAt": "2026-09-05T10:10:20.208081+00:00",
+  "outputExists": false
+}

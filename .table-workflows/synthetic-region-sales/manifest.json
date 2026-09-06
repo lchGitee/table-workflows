@@ -1,0 +1,149 @@
+{
+  "schemaVersion": "0.1",
+  "workflowId": "synthetic-region-sales",
+  "name": "合成区域销售汇总",
+  "description": "关联订单与客户源表，仅汇总已完成订单，并生成按销售额降序排列的区域汇总工作簿。",
+  "version": 2,
+  "status": "TRIAL",
+  "createdAt": "2026-09-04T09:32:27Z",
+  "updatedAt": "2026-09-04T10:08:50.270Z",
+  "inputSlots": [
+    {
+      "slotId": "orders-source",
+      "label": "订单源表",
+      "description": "包含订单号、客户编号、数量、单价和状态的单一工作簿。",
+      "required": true,
+      "multiple": false,
+      "acceptedExtensions": [
+        ".xlsx"
+      ],
+      "structureFingerprint": {
+        "algorithm": "sha256",
+        "value": "81d29e676dfb51555b7fcbb684b4e51d40857c1d8fa4560103a6b29c1c9b2ba6",
+        "basis": "versions/v0002/structure/orders-input.json"
+      }
+    },
+    {
+      "slotId": "customers-source",
+      "label": "客户源表",
+      "description": "包含唯一客户编号、客户名称和区域的单一工作簿。",
+      "required": true,
+      "multiple": false,
+      "acceptedExtensions": [
+        ".xlsx"
+      ],
+      "structureFingerprint": {
+        "algorithm": "sha256",
+        "value": "434c71d1759496a16e8b83123ee9f86d04f210ab3df05e19915512477dae350c",
+        "basis": "versions/v0002/structure/customers-input.json"
+      }
+    }
+  ],
+  "target": {
+    "mode": "GENERATED",
+    "structureFingerprint": {
+      "algorithm": "sha256",
+      "value": "4a7ba858f4ef2ef7d2fc052405b2be6cf5e2e12ff2d7ae048aebf95799f49653",
+      "basis": "versions/v0002/structure/target-output.json"
+    },
+    "outputExtension": ".xlsx",
+    "writeScopes": [
+      "区域汇总!A1:D*"
+    ],
+    "protectedScopes": [],
+    "preserveUnlistedCells": true
+  },
+  "implementation": {
+    "kind": "SCRIPT",
+    "entrypoint": "versions/v0002/run.mjs",
+    "command": [
+      "/Users/lch/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+      "versions/v0002/run.mjs",
+      "--request",
+      "{request}"
+    ],
+    "runtime": "Node.js 24.19.0 + @oai/artifact-tool 2.8.59 + Python 3.12.14 + openpyxl 3.1.5；精确版本和完整性见 dependency-lock.json。",
+    "artifacts": [
+      {
+        "path": "versions/v0002/run.mjs",
+        "kind": "SCRIPT",
+        "sha256": "5f6ed285062e75a74ebc942b4f856ec3d6c09c1db6116b6dd51ffc0046d84323"
+      },
+      {
+        "path": "versions/v0002/inspect_structure.py",
+        "kind": "SCRIPT",
+        "sha256": "58712ea2d04b12b5d72e76bf01a1fbe27cedbc3f011b28ba0beb4a1e11772191"
+      },
+      {
+        "path": "versions/v0002/dependency-lock.json",
+        "kind": "DEPENDENCY_LOCK",
+        "sha256": "b4de544105027325cb5e58f3999144cc533575a0d9395777182f9a30fda7c089"
+      },
+      {
+        "path": "versions/v0002/structure/orders-input.json",
+        "kind": "STRUCTURE_CONTRACT",
+        "sha256": "4da470b9d994451b2aa2e5a6235b02d343851751bea0de68d7288364948fa28a"
+      },
+      {
+        "path": "versions/v0002/structure/customers-input.json",
+        "kind": "STRUCTURE_CONTRACT",
+        "sha256": "3f062e1f90914f0fa2131df301faaa555448f29885859cc3d24a4cee4ac1364b"
+      },
+      {
+        "path": "versions/v0002/structure/target-output.json",
+        "kind": "STRUCTURE_CONTRACT",
+        "sha256": "8ed62dd08c5991b7cbbeae92dbd61a3c624ee36a7b3576ded1ebba3b5f6b682f"
+      }
+    ]
+  },
+  "validation": {
+    "goldCases": [
+      {
+        "caseId": "discovery-001",
+        "storage": "REPLAYABLE",
+        "requestPath": "runs/fix-regression/request.json",
+        "expectedResultPath": "cases/discovery-001/expected/expected.xlsx",
+        "result": "PASS",
+        "usedForDiscovery": true,
+        "lastRunAt": "2026-09-04T10:08:23.526Z",
+        "acceptedDifferenceCount": 0
+      }
+    ],
+    "invariants": [
+      {
+        "id": "unique-orders",
+        "description": "订单号必须存在且唯一。",
+        "severity": "BLOCK",
+        "checker": "versions/v0002/run.mjs"
+      },
+      {
+        "id": "unique-customers",
+        "description": "客户编号必须存在且在客户源表中唯一。",
+        "severity": "BLOCK",
+        "checker": "versions/v0002/run.mjs"
+      },
+      {
+        "id": "valid-numbers",
+        "description": "数量和单价必须是非负有限数字。",
+        "severity": "BLOCK",
+        "checker": "versions/v0002/run.mjs"
+      },
+      {
+        "id": "completed-match",
+        "description": "每条已完成订单必须匹配唯一客户和非空区域。",
+        "severity": "BLOCK",
+        "checker": "versions/v0002/run.mjs"
+      },
+      {
+        "id": "balanced-summary",
+        "description": "输出订单数、件数和销售额必须与已完成订单明细平衡。",
+        "severity": "BLOCK",
+        "checker": "runs/fix-regression/regression-report.json:businessReplay"
+      }
+    ],
+    "lastValidatedAt": "2026-09-04T10:08:50.270Z"
+  },
+  "parameters": [],
+  "changeSummary": "v0002 从实际工作簿计算结构指纹并校验依赖锁；历史回放、数据稳定性和非表头结构漂移负例均通过，状态保持 TRIAL。",
+  "previousVersion": 1
+}

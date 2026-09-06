@@ -1,0 +1,40 @@
+{
+  "startedAt": "2026-09-06T01:57:18.439974+00:00",
+  "workflowId": "order-ownership",
+  "version": 1,
+  "observations": [
+    {
+      "path": "/Users/lch/Desktop/project/table-workflows/.table-workflows/acceptance-20260906/private/J/anomaly-duplicate/source.xlsx",
+      "fingerprint": "6144738906c2a3b59a6cd79281eb224767d2b7c229154bc4274e614191f6c78f",
+      "expected": "6144738906c2a3b59a6cd79281eb224767d2b7c229154bc4274e614191f6c78f",
+      "matches": true
+    },
+    {
+      "path": "/Users/lch/Desktop/project/table-workflows/.table-workflows/acceptance-20260906/case-J/order-ownership/templates/expected.xlsx",
+      "fingerprint": "81edcc6bbb3f50c2757ffdb2f95433e240c1b6fd42bd2afdce6c2717b1602271",
+      "expected": "81edcc6bbb3f50c2757ffdb2f95433e240c1b6fd42bd2afdce6c2717b1602271",
+      "matches": true
+    }
+  ],
+  "warnings": [],
+  "exceptions": [
+    "客户主表编号重复：C01"
+  ],
+  "manualModifications": [],
+  "implementationHashes": {
+    "versions/v0001/run.py": "0e5b811f1a85b054e713cf4ec71a223984727dd454963748b685f2ac1d016cad",
+    "versions/v0001/structure.py": "acf87e211b2d5f202e68078a02e281040014afd1213c034d69e515c2dc9a624c",
+    "versions/v0001/render.mjs": "b170865384296a8531980acd26bd63b46e852a6b4f42d8b4e14d0d27761b66f0",
+    "versions/v0001/dependencies.lock.json": "48f79ca3feb1b1dab5720cde1f6efaabcbf92fca1ecb706f6520e30be75cc748",
+    "versions/v0001/structure/source.json": "6144738906c2a3b59a6cd79281eb224767d2b7c229154bc4274e614191f6c78f",
+    "versions/v0001/structure/target.json": "81edcc6bbb3f50c2757ffdb2f95433e240c1b6fd42bd2afdce6c2717b1602271"
+  },
+  "inputHashes": {
+    "/Users/lch/Desktop/project/table-workflows/.table-workflows/acceptance-20260906/private/J/anomaly-duplicate/source.xlsx": "a1e7315335f1f49e7ba97b178e15e0bb8038528d3e52c7c99c0a723f1599066b",
+    "/Users/lch/Desktop/project/table-workflows/.table-workflows/acceptance-20260906/case-J/order-ownership/templates/expected.xlsx": "9b736b8a27708361763a370781884b30fe3ea2009773c1c3d95d578d72a3d7cc"
+  },
+  "outputPath": "/Users/lch/Desktop/project/table-workflows/.table-workflows/acceptance-20260906/anomaly-runs/J/duplicate/result.xlsx",
+  "exitStatus": 1,
+  "exceptionCount": 1,
+  "completedAt": "2026-09-06T01:57:18.655139+00:00"
+}

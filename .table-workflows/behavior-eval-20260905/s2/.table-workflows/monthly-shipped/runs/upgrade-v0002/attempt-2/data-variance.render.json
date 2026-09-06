@@ -1,0 +1,13 @@
+{
+  "rows": [
+    [
+      "SYN-W1",
+      7
+    ],
+    [
+      "SYN-W2",
+      11
+    ]
+  ],
+  "outputPath": "/Users/lch/Desktop/project/table-workflows/.table-workflows/behavior-eval-20260905/s2/.table-workflows/monthly-shipped/runs/upgrade-v0002/attempt-2/data-variance-result.xlsx"
+}

@@ -1,0 +1,88 @@
+{
+  "fileType": "xlsx",
+  "sheets": [
+    {
+      "name": "汇总",
+      "state": "visible",
+      "headers": [
+        "仓库代码",
+        "发货件数"
+      ],
+      "columnCount": 2,
+      "merges": [],
+      "hiddenRows": [],
+      "hiddenColumns": [],
+      "formulas": [],
+      "tables": [],
+      "validations": "<dataValidations count=\"0\" />",
+      "conditionalFormats": [],
+      "freezePanes": null,
+      "autoFilter": "<autoFilter />",
+      "protection": "<sheetProtection selectLockedCells=\"0\" selectUnlockedCells=\"0\" sheet=\"0\" objects=\"0\" insertRows=\"1\" insertHyperlinks=\"1\" autoFilter=\"1\" scenarios=\"0\" formatColumns=\"1\" deleteColumns=\"1\" insertColumns=\"1\" pivotTables=\"1\" deleteRows=\"1\" formatCells=\"1\" formatRows=\"1\" sort=\"1\" />"
+    }
+  ],
+  "definedNames": [],
+  "parts": [
+    "[Content_Types].xml",
+    "_rels/.rels",
+    "xl/_rels/workbook.xml.rels",
+    "xl/styles.xml",
+    "xl/theme/theme1.xml",
+    "xl/workbook.xml",
+    "xl/worksheets/sheet1.xml"
+  ],
+  "relationships": {
+    "_rels/.rels": [
+      {
+        "Type": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument",
+        "Target": "/xl/workbook.xml"
+      }
+    ],
+    "xl/_rels/workbook.xml.rels": [
+      {
+        "Type": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/sharedStrings",
+        "Target": "/xl/sharedStrings.xml"
+      },
+      {
+        "Type": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles",
+        "Target": "/xl/styles.xml"
+      },
+      {
+        "Type": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme",
+        "Target": "/xl/theme/theme1.xml"
+      },
+      {
+        "Type": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet",
+        "Target": "/xl/worksheets/sheet1.xml"
+      }
+    ]
+  },
+  "relationshipBindings": {
+    "_rels/.rels": [],
+    "xl/_rels/workbook.xml.rels": [
+      {
+        "element": "{http://schemas.openxmlformats.org/spreadsheetml/2006/main}sheet",
+        "attribute": "{http://schemas.openxmlformats.org/officeDocument/2006/relationships}id",
+        "relationship": {
+          "Type": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet",
+          "Target": "/xl/worksheets/sheet1.xml"
+        }
+      }
+    ]
+  },
+  "featureParts": {},
+  "allowedVariance": [
+    "ordinary data values",
+    "data row count",
+    "cell styles and dimensions",
+    "document properties",
+    "relationship Id labels with unchanged bindings"
+  ],
+  "fieldTypes": {
+    "订单号": "nonempty text unique",
+    "仓库代码": "nonempty text",
+    "件数": "finite number",
+    "发货状态": "nonempty text",
+    "收款状态": "ignored"
+  }
+}

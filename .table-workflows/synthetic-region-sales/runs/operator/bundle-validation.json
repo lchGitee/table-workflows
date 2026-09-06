@@ -1,0 +1,198 @@
+{
+  "schemaVersion": "0.1",
+  "workflowId": "synthetic-region-sales",
+  "checkedAt": "2026-09-04T09:41:41.124Z",
+  "status": "PASS",
+  "checks": [
+    {
+      "label": "根 manifest 通过 schema",
+      "status": "PASS",
+      "details": []
+    },
+    {
+      "label": "version-manifest 通过 schema",
+      "status": "PASS",
+      "details": []
+    },
+    {
+      "label": "根清单与版本快照的 workflowId 一致",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "label": "根清单与版本快照的 version 一致",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "label": "根清单与版本快照的 inputSlots 一致",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "label": "根清单与版本快照的 target 一致",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "label": "根清单与版本快照的 implementation 一致",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "label": "workflowId 与目录名一致",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "label": "inputSlots 唯一",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "label": "parameters 唯一",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "label": "单一发现案例仅标记 TRIAL",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "label": "TRIAL 含 REPLAYABLE PASS 案例",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "label": "没有伪造独立验证案例",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "label": "implementation.command 中 {request} 恰好一次",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "label": "实现产物路径受限：versions/v0001/run.mjs",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "label": "实现产物哈希匹配：versions/v0001/run.mjs",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "label": "实现产物路径受限：versions/v0001/structure/orders-input.json",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "label": "实现产物哈希匹配：versions/v0001/structure/orders-input.json",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "label": "实现产物路径受限：versions/v0001/structure/customers-input.json",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "label": "实现产物哈希匹配：versions/v0001/structure/customers-input.json",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "label": "实现产物路径受限：versions/v0001/structure/target-output.json",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "label": "实现产物哈希匹配：versions/v0001/structure/target-output.json",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "label": "结构依据路径受限：orders-source",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "label": "结构指纹匹配：orders-source",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "label": "结构依据路径受限：customers-source",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "label": "结构指纹匹配：customers-source",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "label": "目标结构指纹匹配",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "label": "运行请求全部使用绝对路径",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "label": "主运行输出路径不覆盖输入",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "label": "主运行回执 PASS",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "label": "差异报告全部检查 PASS",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "label": "覆盖输入失败关闭",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "label": "覆盖已有输出失败关闭",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "label": "输出文件哈希匹配运行回执",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "label": "全部输入运行前后哈希不变",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "label": "本测试恰好创建 4 个 xlsx",
+      "status": "PASS",
+      "details": [
+        "cases/discovery-001/expected/expected.xlsx",
+        "cases/discovery-001/inputs/customers.xlsx",
+        "cases/discovery-001/inputs/orders.xlsx",
+        "outputs/operator/result.xlsx"
+      ]
+    },
+    {
+      "label": "唯一 PASS 案例明确用于规则发现",
+      "status": "PASS",
+      "details": null
+    }
+  ]
+}

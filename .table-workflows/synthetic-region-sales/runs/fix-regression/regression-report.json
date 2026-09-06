@@ -1,0 +1,113 @@
+{
+  "schemaVersion": "0.1",
+  "workflowId": "synthetic-region-sales",
+  "workflowVersion": 2,
+  "generatedAt": "2026-09-04T10:08:28.042Z",
+  "validationStatus": "PASS",
+  "checks": {
+    "baselineReplayPass": true,
+    "dataOnlyReplayPass": true,
+    "baselineStructureMatches": true,
+    "dataOnlyStructureStable": true,
+    "nonHeaderStructureDriftDetected": true,
+    "driftFailsBeforeOutput": true,
+    "receiptRecordsObservedFingerprints": true,
+    "dependencyLockDeclared": true,
+    "dependencyLockHashMatches": true,
+    "dependencyVersionsVerified": true,
+    "baselineValuesExact": true,
+    "dataOnlyValuesExact": true,
+    "formulasExact": true,
+    "stylesExact": true,
+    "noObjectsOrFormulaErrors": true,
+    "outputsReopen": true,
+    "inputHashesUnchanged": true
+  },
+  "structureFingerprints": {
+    "expected": "81d29e676dfb51555b7fcbb684b4e51d40857c1d8fa4560103a6b29c1c9b2ba6",
+    "baseline": "81d29e676dfb51555b7fcbb684b4e51d40857c1d8fa4560103a6b29c1c9b2ba6",
+    "dataOnly": "81d29e676dfb51555b7fcbb684b4e51d40857c1d8fa4560103a6b29c1c9b2ba6",
+    "structuralDrift": "68da91804b86dd16005a04c22fadf6d013587f3a4ed90e517331bdf8b1b885c6",
+    "driftInventory": [
+      "package:xl/drawings/charts/chart1.xml",
+      "package:xl/drawings/drawing1.xml",
+      "订单:chart:1"
+    ]
+  },
+  "businessReplay": {
+    "expected": [
+      [
+        "区域",
+        "完成订单数",
+        "完成件数",
+        "销售额"
+      ],
+      [
+        "华东",
+        2,
+        6,
+        341
+      ],
+      [
+        "华南",
+        2,
+        3,
+        230
+      ]
+    ],
+    "baseline": [
+      [
+        "区域",
+        "完成订单数",
+        "完成件数",
+        "销售额"
+      ],
+      [
+        "华东",
+        2,
+        6,
+        341
+      ],
+      [
+        "华南",
+        2,
+        3,
+        230
+      ]
+    ],
+    "dataOnly": [
+      [
+        "区域",
+        "完成订单数",
+        "完成件数",
+        "销售额"
+      ],
+      [
+        "华东",
+        2,
+        6,
+        341
+      ],
+      [
+        "华南",
+        2,
+        3,
+        230
+      ]
+    ]
+  },
+  "dependencyVersions": {
+    "node": "v24.19.0",
+    "artifactTool": "2.8.59",
+    "python": "3.12.14",
+    "openpyxl": "3.1.5"
+  },
+  "visualReview": {
+    "status": "PASS",
+    "notes": "两个输出与人工正确结果一致，表头、列宽、数字格式均正常，无裁切或视觉异常。",
+    "previews": [
+      "previews/actual-v2.png",
+      "previews/data-only-actual-v2.png"
+    ]
+  }
+}

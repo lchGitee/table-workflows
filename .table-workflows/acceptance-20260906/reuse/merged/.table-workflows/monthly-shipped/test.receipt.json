@@ -1,0 +1,51 @@
+{
+  "workflowId": "monthly-shipped",
+  "workflowVersion": 3,
+  "startedAt": "2026-09-06T01:46:13.443061+00:00",
+  "exitStatus": 1,
+  "observedStructures": [
+    {
+      "path": "/Users/lch/Desktop/project/table-workflows/.table-workflows/acceptance-20260906/reuse/inputs/merged.xlsx",
+      "fingerprint": "d4bb059eb7db2c473597173e08a0922bdaa27d7dc6c5c5885a5573a8b548f448",
+      "expected": "1333622062c8552f9326f1f444fe89ad49041563cd9e2b65df000ad4a76ef47e",
+      "match": false
+    }
+  ],
+  "warnings": [],
+  "exceptionCount": 1,
+  "manualChanges": [],
+  "outputPath": "/Users/lch/Desktop/project/table-workflows/.table-workflows/acceptance-20260906/reuse/merged/.table-workflows/monthly-shipped/result.xlsx",
+  "artifacts": [
+    {
+      "path": "versions/v0003/run.py",
+      "kind": "SCRIPT",
+      "sha256": "85fc163d3359f11fd29bba7ef631553dc6daf6fbee783cd0dae582e63614864a"
+    },
+    {
+      "path": "versions/v0003/render.mjs",
+      "kind": "SCRIPT",
+      "sha256": "d28b973c780e43cfc3feedf0b7068acc4cfdca236e401b38ecc1928b4d94c21a"
+    },
+    {
+      "path": "versions/v0003/dependencies.lock.json",
+      "kind": "DEPENDENCY_LOCK",
+      "sha256": "24948a0e3eaa6e9d1bf27d5c53b832053d36539d6ae4b30c52ae7d0016d8dc9e"
+    },
+    {
+      "path": "versions/v0003/structure/orders.json",
+      "kind": "STRUCTURE_CONTRACT",
+      "sha256": "d0d55d7877d1a1c683beb38fd521bfe4cd50a5c658f852df8d08310e017c4b5a"
+    },
+    {
+      "path": "versions/v0003/structure/expected-result.json",
+      "kind": "STRUCTURE_CONTRACT",
+      "sha256": "01e930c67334e33a47144794774f416f907b3de8ee80d22d613ccf7cf03097a0"
+    }
+  ],
+  "inputHashes": {
+    "/Users/lch/Desktop/project/table-workflows/.table-workflows/acceptance-20260906/reuse/inputs/merged.xlsx": "66049198cc9da62f930848d1935353316bf5cc70e4f72f88b3c9ec6eaeef2faf"
+  },
+  "blockingError": "原表结构已变化，请进入优化模式确认；未生成结果",
+  "finishedAt": "2026-09-06T01:46:13.610383+00:00",
+  "outputExists": false
+}

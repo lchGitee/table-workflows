@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "0.1",
+  "workflowId": "monthly-shipped",
+  "workflowVersion": 2,
+  "inputs": {
+    "orders": [
+      "/Users/lch/Desktop/project/table-workflows/.table-workflows/behavior-eval-20260905/s2/inbox/原表.xlsx"
+    ]
+  },
+  "outputPath": "/Users/lch/Desktop/project/table-workflows/.table-workflows/behavior-eval-20260905/s2/.table-workflows/monthly-shipped/runs/upgrade-v0002/historical-result.xlsx",
+  "parameters": {}
+}

@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "0.1",
+  "workflowId": "service-plan",
+  "workflowVersion": 1,
+  "inputs": {
+    "source": [
+      "/Users/lch/Desktop/project/table-workflows/.table-workflows/acceptance-20260906/private/T/anomaly-unknown/source.xlsx"
+    ]
+  },
+  "outputPath": "/Users/lch/Desktop/project/table-workflows/.table-workflows/acceptance-20260906/anomaly-runs/T/unknown/result.xlsx",
+  "parameters": {},
+  "targetTemplatePath": "/Users/lch/Desktop/project/table-workflows/.table-workflows/acceptance-20260906/case-T/service-plan/templates/template.xlsx"
+}

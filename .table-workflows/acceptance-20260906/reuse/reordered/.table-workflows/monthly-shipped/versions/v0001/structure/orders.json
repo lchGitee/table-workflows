@@ -1,0 +1,82 @@
+{
+  "fileType": "xlsx",
+  "sheets": [
+    {
+      "name": "订单",
+      "state": "visible",
+      "headers": [
+        "订单号",
+        "仓库代码",
+        "件数",
+        "发货状态",
+        "收款状态"
+      ],
+      "columnCount": 5,
+      "merges": [],
+      "hiddenRows": [],
+      "hiddenColumns": [],
+      "formulas": [],
+      "tables": [],
+      "validations": "<dataValidations count=\"0\" />",
+      "conditionalFormats": [],
+      "freezePanes": null,
+      "autoFilter": "<autoFilter />",
+      "protection": "<sheetProtection selectLockedCells=\"0\" selectUnlockedCells=\"0\" sheet=\"0\" objects=\"0\" insertRows=\"1\" insertHyperlinks=\"1\" autoFilter=\"1\" scenarios=\"0\" formatColumns=\"1\" deleteColumns=\"1\" insertColumns=\"1\" pivotTables=\"1\" deleteRows=\"1\" formatCells=\"1\" formatRows=\"1\" sort=\"1\" />"
+    }
+  ],
+  "definedNames": [],
+  "parts": [
+    "[Content_Types].xml",
+    "_rels/.rels",
+    "xl/_rels/workbook.xml.rels",
+    "xl/styles.xml",
+    "xl/theme/theme1.xml",
+    "xl/workbook.xml",
+    "xl/worksheets/sheet1.xml"
+  ],
+  "relationships": {
+    "_rels/.rels": [
+      {
+        "Type": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument",
+        "Target": "/xl/workbook.xml",
+        "Id": "R402e2f4d04ef4c6a"
+      }
+    ],
+    "xl/_rels/workbook.xml.rels": [
+      {
+        "Type": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/sharedStrings",
+        "Target": "/xl/sharedStrings.xml",
+        "Id": "R599d897e5ad24496"
+      },
+      {
+        "Type": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet",
+        "Target": "/xl/worksheets/sheet1.xml",
+        "Id": "Rb090d3e3a2584bc0"
+      },
+      {
+        "Type": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme",
+        "Target": "/xl/theme/theme1.xml",
+        "Id": "Rf7250268f48e4f1a"
+      },
+      {
+        "Type": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles",
+        "Target": "/xl/styles.xml",
+        "Id": "Rf75bd8d90e8b4e94"
+      }
+    ]
+  },
+  "featureParts": {},
+  "allowedVariance": [
+    "ordinary data values",
+    "data row count",
+    "cell styles and dimensions",
+    "document properties"
+  ],
+  "fieldTypes": {
+    "订单号": "nonempty text unique",
+    "仓库代码": "nonempty text",
+    "件数": "finite number",
+    "发货状态": "nonempty text",
+    "收款状态": "ignored"
+  }
+}

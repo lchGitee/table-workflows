@@ -1,0 +1,17 @@
+{
+  "rows": [
+    [
+      "W01",
+      3
+    ],
+    [
+      "W02",
+      12
+    ],
+    [
+      "W04",
+      8
+    ]
+  ],
+  "outputPath": "/Users/lch/Desktop/project/table-workflows/.table-workflows/acceptance-20260906/reuse/changed/.table-workflows/monthly-shipped/result.xlsx"
+}

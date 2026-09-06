@@ -1,0 +1,70 @@
+{
+  "workflowId": "monthly-shipped",
+  "workflowVersion": 2,
+  "startedAt": "2026-09-05T09:56:04.359624+00:00",
+  "exitStatus": 0,
+  "observedStructures": [
+    {
+      "path": "/Users/lch/Desktop/project/table-workflows/.table-workflows/behavior-eval-20260905/s2/inbox/本月原表.xlsx",
+      "fingerprint": "403c7395f39f8d54e2e11f5d258a8eeeac36be36488888737d6902d32dfba910",
+      "expected": "403c7395f39f8d54e2e11f5d258a8eeeac36be36488888737d6902d32dfba910",
+      "match": true
+    }
+  ],
+  "warnings": [],
+  "exceptionCount": 0,
+  "manualChanges": [],
+  "outputPath": "/Users/lch/Desktop/project/table-workflows/.table-workflows/behavior-eval-20260905/s2/.table-workflows/monthly-shipped/runs/upgrade-v0002/attempt-2/current-month-result.xlsx",
+  "artifacts": [
+    {
+      "path": "versions/v0002/run.py",
+      "kind": "SCRIPT",
+      "sha256": "5a312c61fcf02f3bd82d4082efc61e349effbecf8e4c7c3ab05701545262dd5d"
+    },
+    {
+      "path": "versions/v0002/render.mjs",
+      "kind": "SCRIPT",
+      "sha256": "d28b973c780e43cfc3feedf0b7068acc4cfdca236e401b38ecc1928b4d94c21a"
+    },
+    {
+      "path": "versions/v0002/dependencies.lock.json",
+      "kind": "DEPENDENCY_LOCK",
+      "sha256": "24948a0e3eaa6e9d1bf27d5c53b832053d36539d6ae4b30c52ae7d0016d8dc9e"
+    },
+    {
+      "path": "versions/v0002/structure/orders.json",
+      "kind": "STRUCTURE_CONTRACT",
+      "sha256": "78b23134e70278124e61672b231f3c8620795199ce8ed11818bab11ccf839fcc"
+    },
+    {
+      "path": "versions/v0002/structure/expected-result.json",
+      "kind": "STRUCTURE_CONTRACT",
+      "sha256": "479fc8b0c91100775d98c86ff83a336092f5435759e03ab08be86b3f2844d0c5"
+    }
+  ],
+  "inputHashes": {
+    "/Users/lch/Desktop/project/table-workflows/.table-workflows/behavior-eval-20260905/s2/inbox/本月原表.xlsx": "fd684709bcee96de48bed42e44c461b70e9e8c6cafd9b8905fb9f2aea4eac531"
+  },
+  "outputStructure": {
+    "fingerprint": "8a2989e931a043822fd9bc1fc6607719fcae1aaedd8510d62667a626d5e0a7b5",
+    "expected": "8a2989e931a043822fd9bc1fc6607719fcae1aaedd8510d62667a626d5e0a7b5",
+    "match": true
+  },
+  "checks": {
+    "shipment-only": "PASS",
+    "unique-order": "PASS",
+    "balanced-total": "PASS",
+    "output-structure": "PASS",
+    "protected-scopes": "N/A: GENERATED target"
+  },
+  "outputHash": "cecf52622e09018555b8a5d44e42bdf56fdc3e8164fd8a5db6dcd941bb7571a7",
+  "inputRecords": 5,
+  "includedRecords": 3,
+  "excludedRecords": 2,
+  "unmatchedRecords": 0,
+  "outputRecords": 3,
+  "shippedTotal": 12,
+  "reopened": true,
+  "finishedAt": "2026-09-05T09:56:05.150918+00:00",
+  "outputExists": true
+}

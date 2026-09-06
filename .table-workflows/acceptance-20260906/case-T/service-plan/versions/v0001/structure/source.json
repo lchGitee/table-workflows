@@ -1,0 +1,155 @@
+{
+  "format": "xlsx",
+  "role": "source",
+  "sheets": [
+    {
+      "name": "需求",
+      "visibility": "visible",
+      "headers": {
+        "A1": "项目编码",
+        "B1": "项目名称",
+        "C1": "数量"
+      },
+      "formula": {},
+      "metadata": [
+        [
+          "{http://schemas.openxmlformats.org/spreadsheetml/2006/main}sheetFormatPr",
+          [
+            [
+              "defaultRowHeight",
+              "15"
+            ]
+          ],
+          "",
+          []
+        ],
+        [
+          "{http://schemas.openxmlformats.org/spreadsheetml/2006/main}cols",
+          [],
+          "",
+          [
+            [
+              "{http://schemas.openxmlformats.org/spreadsheetml/2006/main}col",
+              [
+                [
+                  "customWidth",
+                  "1"
+                ],
+                [
+                  "hidden",
+                  "0"
+                ],
+                [
+                  "max",
+                  "1"
+                ],
+                [
+                  "min",
+                  "1"
+                ],
+                [
+                  "width",
+                  "20"
+                ]
+              ],
+              "",
+              []
+            ],
+            [
+              "{http://schemas.openxmlformats.org/spreadsheetml/2006/main}col",
+              [
+                [
+                  "customWidth",
+                  "1"
+                ],
+                [
+                  "hidden",
+                  "0"
+                ],
+                [
+                  "max",
+                  "2"
+                ],
+                [
+                  "min",
+                  "2"
+                ],
+                [
+                  "width",
+                  "20"
+                ]
+              ],
+              "",
+              []
+            ],
+            [
+              "{http://schemas.openxmlformats.org/spreadsheetml/2006/main}col",
+              [
+                [
+                  "customWidth",
+                  "1"
+                ],
+                [
+                  "hidden",
+                  "0"
+                ],
+                [
+                  "max",
+                  "3"
+                ],
+                [
+                  "min",
+                  "3"
+                ],
+                [
+                  "width",
+                  "20"
+                ]
+              ],
+              "",
+              []
+            ]
+          ]
+        ],
+        [
+          "{http://schemas.openxmlformats.org/spreadsheetml/2006/main}pageMargins",
+          [
+            [
+              "bottom",
+              "0.75"
+            ],
+            [
+              "footer",
+              "0.3"
+            ],
+            [
+              "header",
+              "0.3"
+            ],
+            [
+              "left",
+              "0.7"
+            ],
+            [
+              "right",
+              "0.7"
+            ],
+            [
+              "top",
+              "0.75"
+            ]
+          ],
+          "",
+          []
+        ]
+      ],
+      "hiddenRows": [],
+      "extraColumns": []
+    }
+  ],
+  "names": [],
+  "objects": [],
+  "allowedVariance": [
+    "source ordinary row values and row count"
+  ]
+}

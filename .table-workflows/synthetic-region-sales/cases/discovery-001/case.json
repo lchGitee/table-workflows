@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "0.1",
+  "caseId": "discovery-001",
+  "storage": "REPLAYABLE",
+  "usedForDiscovery": true,
+  "syntheticData": true,
+  "roles": {
+    "orders-source": "inputs/orders.xlsx",
+    "customers-source": "inputs/customers.xlsx",
+    "human-confirmed-result": "expected/expected.xlsx"
+  },
+  "businessPeriod": "synthetic-fixed-sample",
+  "confirmation": "题设已明确确认全部关联、校验、汇总、舍入、筛选、排序和写入范围口径。"
+}

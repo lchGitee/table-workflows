@@ -1,0 +1,37 @@
+{
+  "fileType": "xlsx",
+  "sheets": [
+    {
+      "name": "工时明细",
+      "visibility": "visible",
+      "headers": {
+        "A1": "记录编号",
+        "B1": "部门编号",
+        "C1": "工时",
+        "D1": "状态"
+      },
+      "columns": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "dataDirection": "rows-below-row-1",
+      "formulas": [],
+      "merges": [],
+      "hiddenRows": [],
+      "hiddenColumns": [],
+      "otherFeatures": []
+    }
+  ],
+  "definedNames": [],
+  "objects": [],
+  "allowedVariance": [
+    "ordinary data values",
+    "data row count",
+    "file name",
+    "visible row heights",
+    "column widths",
+    "styles"
+  ]
+}

@@ -1,0 +1,260 @@
+{
+  "result": "PASS",
+  "workflowId": "monthly-shipped",
+  "version": 2,
+  "status": "TRIAL",
+  "historicalCases": 1,
+  "independentHistoricalCases": 0,
+  "userAuthorization": "修正任务模板，让以后同类文件也能直接运行；业务统计规则按原来，保留旧版本，处理本月原表。",
+  "changeScope": "只规范化关系 Id，继续比较类型、目标和引用绑定；统计逻辑不变。",
+  "structureTests": [
+    {
+      "case": "historical",
+      "inputPath": "/Users/lch/Desktop/project/table-workflows/.table-workflows/behavior-eval-20260905/s2/inbox/原表.xlsx",
+      "expected": "PASS",
+      "actualExitStatus": 0,
+      "outputExists": true,
+      "observed": [
+        {
+          "path": "/Users/lch/Desktop/project/table-workflows/.table-workflows/behavior-eval-20260905/s2/inbox/原表.xlsx",
+          "fingerprint": "403c7395f39f8d54e2e11f5d258a8eeeac36be36488888737d6902d32dfba910",
+          "expected": "403c7395f39f8d54e2e11f5d258a8eeeac36be36488888737d6902d32dfba910",
+          "match": true
+        }
+      ],
+      "blockingError": null,
+      "invariants": {
+        "shipment-only": "PASS",
+        "unique-order": "PASS",
+        "balanced-total": "PASS",
+        "output-structure": "PASS",
+        "protected-scopes": "N/A: GENERATED target"
+      },
+      "counts": {
+        "inputRecords": 4,
+        "includedRecords": 2,
+        "excludedRecords": 2,
+        "outputRecords": 2,
+        "shippedTotal": 5,
+        "exceptionCount": 0,
+        "unmatchedRecords": 0
+      }
+    },
+    {
+      "case": "current-month",
+      "inputPath": "/Users/lch/Desktop/project/table-workflows/.table-workflows/behavior-eval-20260905/s2/inbox/本月原表.xlsx",
+      "expected": "PASS",
+      "actualExitStatus": 0,
+      "outputExists": true,
+      "observed": [
+        {
+          "path": "/Users/lch/Desktop/project/table-workflows/.table-workflows/behavior-eval-20260905/s2/inbox/本月原表.xlsx",
+          "fingerprint": "403c7395f39f8d54e2e11f5d258a8eeeac36be36488888737d6902d32dfba910",
+          "expected": "403c7395f39f8d54e2e11f5d258a8eeeac36be36488888737d6902d32dfba910",
+          "match": true
+        }
+      ],
+      "blockingError": null,
+      "invariants": {
+        "shipment-only": "PASS",
+        "unique-order": "PASS",
+        "balanced-total": "PASS",
+        "output-structure": "PASS",
+        "protected-scopes": "N/A: GENERATED target"
+      },
+      "counts": {
+        "inputRecords": 5,
+        "includedRecords": 3,
+        "excludedRecords": 2,
+        "outputRecords": 3,
+        "shippedTotal": 12,
+        "exceptionCount": 0,
+        "unmatchedRecords": 0
+      }
+    },
+    {
+      "case": "data-variance",
+      "inputPath": "/Users/lch/Desktop/project/table-workflows/.table-workflows/behavior-eval-20260905/s2/.table-workflows/monthly-shipped/runs/fixtures/data-variance.xlsx",
+      "expected": "PASS",
+      "actualExitStatus": 0,
+      "outputExists": true,
+      "observed": [
+        {
+          "path": "/Users/lch/Desktop/project/table-workflows/.table-workflows/behavior-eval-20260905/s2/.table-workflows/monthly-shipped/runs/fixtures/data-variance.xlsx",
+          "fingerprint": "403c7395f39f8d54e2e11f5d258a8eeeac36be36488888737d6902d32dfba910",
+          "expected": "403c7395f39f8d54e2e11f5d258a8eeeac36be36488888737d6902d32dfba910",
+          "match": true
+        }
+      ],
+      "blockingError": null,
+      "invariants": {
+        "shipment-only": "PASS",
+        "unique-order": "PASS",
+        "balanced-total": "PASS",
+        "output-structure": "PASS",
+        "protected-scopes": "N/A: GENERATED target"
+      },
+      "counts": {
+        "inputRecords": 3,
+        "includedRecords": 2,
+        "excludedRecords": 1,
+        "outputRecords": 2,
+        "shippedTotal": 18,
+        "exceptionCount": 0,
+        "unmatchedRecords": 0
+      }
+    },
+    {
+      "case": "hidden-column",
+      "inputPath": "/Users/lch/Desktop/project/table-workflows/.table-workflows/behavior-eval-20260905/s2/.table-workflows/monthly-shipped/runs/fixtures/hidden-column.xlsx",
+      "expected": "BLOCK before output",
+      "actualExitStatus": 1,
+      "outputExists": false,
+      "observed": [
+        {
+          "path": "/Users/lch/Desktop/project/table-workflows/.table-workflows/behavior-eval-20260905/s2/.table-workflows/monthly-shipped/runs/fixtures/hidden-column.xlsx",
+          "fingerprint": "7de4c219a42182e968fabf468485ef9bde7a534beab53cbe1eb58adccf4a11b0",
+          "expected": "403c7395f39f8d54e2e11f5d258a8eeeac36be36488888737d6902d32dfba910",
+          "match": false
+        }
+      ],
+      "blockingError": "原表结构已变化，请进入优化模式确认；未生成结果"
+    },
+    {
+      "case": "relationship-target",
+      "inputPath": "/Users/lch/Desktop/project/table-workflows/.table-workflows/behavior-eval-20260905/s2/.table-workflows/monthly-shipped/runs/upgrade-v0002/attempt-2/relationship-target.xlsx",
+      "expected": "BLOCK before output",
+      "actualExitStatus": 1,
+      "outputExists": false,
+      "observed": [
+        {
+          "path": "/Users/lch/Desktop/project/table-workflows/.table-workflows/behavior-eval-20260905/s2/.table-workflows/monthly-shipped/runs/upgrade-v0002/attempt-2/relationship-target.xlsx",
+          "fingerprint": "3074f21b6427e45491d5e437e445b4a2563590aa6f777a84aaf147d4ee51d012",
+          "expected": "403c7395f39f8d54e2e11f5d258a8eeeac36be36488888737d6902d32dfba910",
+          "match": false
+        }
+      ],
+      "blockingError": "原表结构已变化，请进入优化模式确认；未生成结果"
+    },
+    {
+      "case": "dangling-binding",
+      "inputPath": "/Users/lch/Desktop/project/table-workflows/.table-workflows/behavior-eval-20260905/s2/.table-workflows/monthly-shipped/runs/upgrade-v0002/attempt-2/dangling-binding.xlsx",
+      "expected": "BLOCK before output",
+      "actualExitStatus": 1,
+      "outputExists": false,
+      "observed": [],
+      "blockingError": "'missing-relationship'"
+    },
+    {
+      "case": "duplicate-order",
+      "inputPath": "/Users/lch/Desktop/project/table-workflows/.table-workflows/behavior-eval-20260905/s2/.table-workflows/monthly-shipped/runs/upgrade-v0002/attempt-2/duplicate-order.xlsx",
+      "expected": "BLOCK before output",
+      "actualExitStatus": 1,
+      "outputExists": false,
+      "observed": [
+        {
+          "path": "/Users/lch/Desktop/project/table-workflows/.table-workflows/behavior-eval-20260905/s2/.table-workflows/monthly-shipped/runs/upgrade-v0002/attempt-2/duplicate-order.xlsx",
+          "fingerprint": "403c7395f39f8d54e2e11f5d258a8eeeac36be36488888737d6902d32dfba910",
+          "expected": "403c7395f39f8d54e2e11f5d258a8eeeac36be36488888737d6902d32dfba910",
+          "match": true
+        }
+      ],
+      "blockingError": "第 3 行订单号为空或重复，需确认处理口径"
+    },
+    {
+      "case": "renamed-ids",
+      "inputPath": "/Users/lch/Desktop/project/table-workflows/.table-workflows/behavior-eval-20260905/s2/.table-workflows/monthly-shipped/runs/upgrade-v0002/attempt-2/renamed-ids.xlsx",
+      "expected": "PASS",
+      "actualExitStatus": 0,
+      "outputExists": true,
+      "observed": [
+        {
+          "path": "/Users/lch/Desktop/project/table-workflows/.table-workflows/behavior-eval-20260905/s2/.table-workflows/monthly-shipped/runs/upgrade-v0002/attempt-2/renamed-ids.xlsx",
+          "fingerprint": "403c7395f39f8d54e2e11f5d258a8eeeac36be36488888737d6902d32dfba910",
+          "expected": "403c7395f39f8d54e2e11f5d258a8eeeac36be36488888737d6902d32dfba910",
+          "match": true
+        }
+      ],
+      "blockingError": null,
+      "invariants": {
+        "shipment-only": "PASS",
+        "unique-order": "PASS",
+        "balanced-total": "PASS",
+        "output-structure": "PASS",
+        "protected-scopes": "N/A: GENERATED target"
+      },
+      "counts": {
+        "inputRecords": 3,
+        "includedRecords": 2,
+        "excludedRecords": 1,
+        "outputRecords": 2,
+        "shippedTotal": 18,
+        "exceptionCount": 0,
+        "unmatchedRecords": 0
+      }
+    }
+  ],
+  "historicalCellComparison": [
+    {
+      "sheet": "汇总",
+      "cell": "A1",
+      "valueEqual": true,
+      "formulaEqual": true,
+      "styleEqual": true
+    },
+    {
+      "sheet": "汇总",
+      "cell": "B1",
+      "valueEqual": true,
+      "formulaEqual": true,
+      "styleEqual": true
+    },
+    {
+      "sheet": "汇总",
+      "cell": "A2",
+      "valueEqual": true,
+      "formulaEqual": true,
+      "styleEqual": true
+    },
+    {
+      "sheet": "汇总",
+      "cell": "B2",
+      "valueEqual": true,
+      "formulaEqual": true,
+      "styleEqual": true
+    },
+    {
+      "sheet": "汇总",
+      "cell": "A3",
+      "valueEqual": true,
+      "formulaEqual": true,
+      "styleEqual": true
+    },
+    {
+      "sheet": "汇总",
+      "cell": "B3",
+      "valueEqual": true,
+      "formulaEqual": true,
+      "styleEqual": true
+    }
+  ],
+  "valueDifferences": 0,
+  "formulaDifferences": 0,
+  "styleDifferences": 0,
+  "oldVersionUnchanged": true,
+  "oldVersionHashes": {
+    "versions/v0001/run.py": "17556ac9eb3e0acd50c10fb7ebff3ebeddb1f8ce21a78e5bcd46e5a2947ec897",
+    "versions/v0001/render.mjs": "d28b973c780e43cfc3feedf0b7068acc4cfdca236e401b38ecc1928b4d94c21a",
+    "versions/v0001/dependencies.lock.json": "24948a0e3eaa6e9d1bf27d5c53b832053d36539d6ae4b30c52ae7d0016d8dc9e",
+    "versions/v0001/version-manifest.json": "3baee91297eb236cc43a5b8f4533740703001c2a5d90d5f0a3b13c55f0ef1c27",
+    "versions/v0001/__pycache__/run.cpython-312.pyc": "fb64832159811c793e60023d1d9b2eae1240e9d66c90eb3dd71ae737c4f02275",
+    "versions/v0001/structure/orders.json": "a1139859262f375d88c523e43bc9e54617a866fedc56c5ad5ebd49568e70df84",
+    "versions/v0001/structure/expected-result.json": "85be9113906d36675c500cf39a8b79dd5f698af538d501c0c78edad4fffa3653"
+  },
+  "originalFilesUnchanged": true,
+  "schemaValidation": {
+    "fullMachineValidation": false,
+    "requiredFieldsAndSemanticChecks": "PASS",
+    "reason": "无完整 JSON Schema 校验器；检查必填字段、版本、路径、命令、案例、产物和依赖。"
+  }
+}

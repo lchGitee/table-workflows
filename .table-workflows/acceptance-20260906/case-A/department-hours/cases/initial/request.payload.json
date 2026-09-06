@@ -1,0 +1,18 @@
+{
+  "template": "/Users/lch/Desktop/project/table-workflows/.table-workflows/acceptance-20260906/case-A/department-hours/templates/result.xlsx",
+  "output": "/Users/lch/Desktop/project/table-workflows/.table-workflows/acceptance-20260906/case-A/department-hours/runs/initial/result.xlsx",
+  "rows": [
+    [
+      "D01",
+      2,
+      4.5
+    ],
+    [
+      "D02",
+      1,
+      2.0
+    ]
+  ],
+  "audit": "/Users/lch/Desktop/project/table-workflows/.table-workflows/acceptance-20260906/case-A/department-hours/cases/initial/request.audit.json",
+  "preview": "/Users/lch/Desktop/project/table-workflows/.table-workflows/acceptance-20260906/case-A/department-hours/cases/initial/request.preview.png"
+}

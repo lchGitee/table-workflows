@@ -1,0 +1,51 @@
+{
+  "workflowId": "monthly-shipped",
+  "workflowVersion": 1,
+  "startedAt": "2026-09-05T09:49:51.835723+00:00",
+  "exitStatus": 1,
+  "observedStructures": [
+    {
+      "path": "/Users/lch/Desktop/project/table-workflows/.table-workflows/behavior-eval-20260905/s2/inbox/本月原表.xlsx",
+      "fingerprint": "872b65afe0ea46b55b5d8d30548f0ae4d0a108e06962a3e4ccc4be082759d00d",
+      "expected": "a4c85a15637d3dcffcf15ba8263ef547f1659d8948c6e4a3b51d44fdad7d3793",
+      "match": false
+    }
+  ],
+  "warnings": [],
+  "exceptionCount": 1,
+  "manualChanges": [],
+  "outputPath": "/Users/lch/Desktop/project/table-workflows/.table-workflows/behavior-eval-20260905/s2/.table-workflows/monthly-shipped/runs/本月仓库发货汇总.xlsx",
+  "artifacts": [
+    {
+      "path": "versions/v0001/run.py",
+      "kind": "SCRIPT",
+      "sha256": "17556ac9eb3e0acd50c10fb7ebff3ebeddb1f8ce21a78e5bcd46e5a2947ec897"
+    },
+    {
+      "path": "versions/v0001/render.mjs",
+      "kind": "SCRIPT",
+      "sha256": "d28b973c780e43cfc3feedf0b7068acc4cfdca236e401b38ecc1928b4d94c21a"
+    },
+    {
+      "path": "versions/v0001/dependencies.lock.json",
+      "kind": "DEPENDENCY_LOCK",
+      "sha256": "24948a0e3eaa6e9d1bf27d5c53b832053d36539d6ae4b30c52ae7d0016d8dc9e"
+    },
+    {
+      "path": "versions/v0001/structure/orders.json",
+      "kind": "STRUCTURE_CONTRACT",
+      "sha256": "a1139859262f375d88c523e43bc9e54617a866fedc56c5ad5ebd49568e70df84"
+    },
+    {
+      "path": "versions/v0001/structure/expected-result.json",
+      "kind": "STRUCTURE_CONTRACT",
+      "sha256": "85be9113906d36675c500cf39a8b79dd5f698af538d501c0c78edad4fffa3653"
+    }
+  ],
+  "inputHashes": {
+    "/Users/lch/Desktop/project/table-workflows/.table-workflows/behavior-eval-20260905/s2/inbox/本月原表.xlsx": "fd684709bcee96de48bed42e44c461b70e9e8c6cafd9b8905fb9f2aea4eac531"
+  },
+  "blockingError": "原表结构已变化，请进入优化模式确认；未生成结果",
+  "finishedAt": "2026-09-05T09:49:52.345405+00:00",
+  "outputExists": false
+}

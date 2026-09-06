@@ -1,0 +1,31 @@
+{
+  "workflowId": "department-hours",
+  "version": 1,
+  "startedAt": "2026-09-06T01:53:10.462495+00:00",
+  "observedStructures": [
+    {
+      "path": "/Users/lch/Desktop/project/table-workflows/.table-workflows/acceptance-20260906/case-A/department-hours/cases/structure-tests/merge-drift.xlsx",
+      "sha256": "ea460686ac811d707ceaf5c18e947edda9f9eb6d651e1721ce314765a2a30ee7",
+      "result": "DRIFT"
+    }
+  ],
+  "warnings": [],
+  "exceptionCount": 1,
+  "manualChanges": [],
+  "implementationHashes": {
+    "versions/v0001/run.py": "b05a368794c7bac954da47fcb511a4c3014033e35094f9c0c578a3534b5268a9",
+    "versions/v0001/structure.py": "3ec3c7e1a0b2c99a4af3782cd593015e19e00750f9a489fa7772a0b4dcedb99c",
+    "versions/v0001/author.mjs": "4174247a7f5f8e2a79e7512c98ad5da814266309d9c25e6154db89a9257c2851",
+    "versions/v0001/dependencies.lock.json": "bdf82a3c55117f302e22045760aee457b02e77cae852edf158fb0ec6d042e7b3",
+    "versions/v0001/structure/source.json": "6e984c86b9e07447b0e64fa5cb3928b7276aea95aa55d1cf104d74c47542c6fe",
+    "versions/v0001/structure/target.json": "bcc56d29dcce2dfa63e07c8011fba547ae17bf514873461d4e1b09d46e677359"
+  },
+  "dependencyLock": "MATCH",
+  "inputHash": "be44df764f52f7d5b3036a7ac5cca9a82b21ea56cbdc6fb3cf9762106136cb4f",
+  "templateHash": "58effdf773dc06fe200825b5824c475c590b248dcba3fbe7ea25897a922b7da0",
+  "outputPath": "/Users/lch/Desktop/project/table-workflows/.table-workflows/acceptance-20260906/case-A/department-hours/runs/merge-drift/result.xlsx",
+  "status": "BLOCKED",
+  "exitStatus": 1,
+  "blockingCheck": "结构发生变化，请进入优化模式：merge-drift.xlsx",
+  "finishedAt": "2026-09-06T01:53:10.545879+00:00"
+}

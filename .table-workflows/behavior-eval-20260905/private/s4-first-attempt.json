@@ -1,0 +1,13 @@
+{
+  "scenario": "S4",
+  "result": "FAIL",
+  "businessOutputCreated": false,
+  "originalBundleUnchanged": true,
+  "executionExitStatus": 1,
+  "rawRelationshipsEqual": false,
+  "relationshipTargetsAndTypesEqual": true,
+  "changedRelationshipParts": ["_rels/.rels", "xl/_rels/workbook.xml.rels"],
+  "receipt": "s2/.table-workflows/monthly-shipped/runs/current-month.receipt.json",
+  "attribution": "生成的本地脚本将非业务关系 Id 计入结构指纹，导致真实新批次误报。Skill 已要求指纹对普通数据变化稳定，但只在原文件上改值的生成测试没有覆盖重新导出；不归因到缺少业务规则。",
+  "positiveBehavior": "全新操作上下文找到固定模板，实际执行并如实报告阻断，没有修改规则或绕过检查。"
+}
