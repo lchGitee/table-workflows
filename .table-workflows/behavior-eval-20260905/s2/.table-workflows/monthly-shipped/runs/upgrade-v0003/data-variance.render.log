@@ -1,3 +1,0 @@
-{"kind":"table","sheet":"汇总","address":"A1:B3","rows":3,"cols":2,"values":[["仓库代码","发货件数"],["SYN-W1",13],["SYN-W2",11]]}
-{"kind":"notice","message":"Cell search matched 0 entries."}
-Inspect result written to file: /Users/lch/Desktop/project/table-workflows/.table-workflows/behavior-eval-20260905/s2/.table-workflows/monthly-shipped/runs/upgrade-v0003/data-variance-result.xlsx.inspect.ndjson

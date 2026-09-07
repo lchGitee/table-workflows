@@ -1,9 +1,0 @@
-{
-  "SKILL.md": "bf14b03b5ae63c2ee3cb7c6ccd1005bb19a3f648a82aa0c369dd4ca235e70f1a",
-  "agents/openai.yaml": "bbf6fa1353fd8be514c07892223c4283ac09e7a8de03b60addd950e9dbf76ab2",
-  "references/create-workflow.md": "4303527e4e4166f695b7044411a3e1a873f724dfaf37f530743fbd1c2de29103",
-  "references/improve-workflow.md": "9c56c7dc7193f152d7dda8ec38214922f05e39981944450c00300ac2994eaaf6",
-  "references/manifest.schema.json": "2d5dfcbe1e9ca289d48080231c70e9f2db57ed0dae12388431c199249c7d20f8",
-  "references/run-workflow.md": "c018bcea66da3fdb0e119b1c4ac8e55d0ffc34ddfb3e329fe053b2789478e444",
-  "references/workflow-bundle.md": "d0bd1dc511220fbdc9472c54aac3f316c9722d52a2aac41e83925bba176191d9"
-}

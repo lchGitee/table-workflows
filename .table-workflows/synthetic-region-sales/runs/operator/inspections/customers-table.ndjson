@@ -1,3 +1,0 @@
-{"kind":"workbook","id":"wb/n5wq2z","sheets":1,"tables":1}
-{"kind":"sheet","id":"ws/rnuh39","name":"客户","index":0,"range":"A1:C6","address":"A1:C6","tables":1}
-{"kind":"table","sheet":"客户","address":"A1:C6","rows":6,"cols":3,"values":[["客户编号","客户名称","区域"],["C001","甲公司","华东"],["C002","乙公司","华南"],["C003","丙公司","华东"],["C004","丁公司","华北"],["C005","戊公司","华南"]]}

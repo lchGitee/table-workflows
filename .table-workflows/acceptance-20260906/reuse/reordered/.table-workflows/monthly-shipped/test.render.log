@@ -1,3 +1,0 @@
-{"kind":"table","sheet":"汇总","address":"A1:B4","rows":4,"cols":2,"values":[["仓库代码","发货件数"],["W01",12],["W02",1],["W03",7]]}
-{"kind":"notice","message":"Cell search matched 0 entries."}
-Inspect result written to file: /Users/lch/Desktop/project/table-workflows/.table-workflows/acceptance-20260906/reuse/reordered/.table-workflows/monthly-shipped/result.xlsx.inspect.ndjson

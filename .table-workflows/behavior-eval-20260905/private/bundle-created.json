@@ -1,9 +1,0 @@
-{
-  "manifest.json": "3baee91297eb236cc43a5b8f4533740703001c2a5d90d5f0a3b13c55f0ef1c27",
-  "versions/v0001/dependencies.lock.json": "24948a0e3eaa6e9d1bf27d5c53b832053d36539d6ae4b30c52ae7d0016d8dc9e",
-  "versions/v0001/render.mjs": "d28b973c780e43cfc3feedf0b7068acc4cfdca236e401b38ecc1928b4d94c21a",
-  "versions/v0001/run.py": "17556ac9eb3e0acd50c10fb7ebff3ebeddb1f8ce21a78e5bcd46e5a2947ec897",
-  "versions/v0001/structure/expected-result.json": "85be9113906d36675c500cf39a8b79dd5f698af538d501c0c78edad4fffa3653",
-  "versions/v0001/structure/orders.json": "a1139859262f375d88c523e43bc9e54617a866fedc56c5ad5ebd49568e70df84",
-  "versions/v0001/version-manifest.json": "3baee91297eb236cc43a5b8f4533740703001c2a5d90d5f0a3b13c55f0ef1c27"
-}

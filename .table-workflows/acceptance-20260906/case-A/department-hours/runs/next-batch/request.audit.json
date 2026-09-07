@@ -1,4 +1,0 @@
-{
-  "table": "{\"kind\":\"table\",\"sheet\":\"部门汇总\",\"address\":\"A1:C3\",\"rows\":3,\"cols\":3,\"values\":[[\"部门编号\",\"有效记录数\",\"净工时\"],[\"D01\",2,-1.5],[\"D02\",3,4.25]]}",
-  "errors": "{\"kind\":\"notice\",\"message\":\"Cell search matched 0 entries.\"}"
-}
