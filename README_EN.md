@@ -2,11 +2,22 @@
 
 [简体中文](README.md) | **English**
 
-> Turn a manually completed spreadsheet process into a validated, repeatable, and maintainable workflow template.
+> Save spreadsheet work you have already done as a reusable workflow, then apply the same rules to the next batch of data.
 
-`spreadsheet-workflow` is a general-purpose Agent Skill designed for non-technical users. Provide one or more source spreadsheets and a human-verified historical result. The Agent helps identify field relationships and business rules, resolves meaningful ambiguities with the user, and produces a repeatable script or DSL.
+Do you organize the same spreadsheets every week or month? `spreadsheet-workflow` helps you save that work as a reusable workflow. Provide the original spreadsheets and a result you have already checked. The Agent helps work out the processing rules, asks you to resolve unclear points, and checks the output against your historical result. For the next batch, it applies the confirmed rules. You can also update the workflow when rules or formats change.
 
-It works well for spreadsheet tasks repeated weekly, monthly, or for every new batch, including multi-table joins, field transformations, grouped summaries, and template-based output. The Skill does not contain built-in rules for attendance, finance, sales, or other business domains. Each workflow derives its rules from the user's examples and confirmations.
+## Example uses
+
+| Recurring task | How it can help |
+| --- | --- |
+| Attendance and payroll sheets | Combine time records, leave records, and staff lists into the company's attendance template; with pay rates and confirmed payroll rules, generate a payroll sheet as well |
+| Sales summaries | Summarize store or channel sales by product, region, or month |
+| Order and payment reconciliation | Match orders with payments and list unmatched records and amount differences |
+| Combining spreadsheets | Join information from separate files using fields such as customer or employee IDs |
+| Data cleanup and conversion | Repeat deduplication, filtering, date formatting, and category mapping |
+| Filling a fixed template | Organize each batch into the required weekly, monthly, or submission form |
+
+The rules come from your examples and confirmations; the Skill has no built-in industry rules. It is intended for spreadsheet tasks you need to repeat.
 
 ## Key capabilities
 
@@ -48,8 +59,9 @@ After installing the Skill from SkillHub, invoke it in an Agent that supports Ag
 ```text
 $spreadsheet-workflow
 
-I have several source spreadsheets and a human-verified historical result.
-Help me turn this process into a reusable workflow template.
+I organize these spreadsheets every month.
+Here are the original files and a result I have already checked.
+Help me save the process so I can use it with next month's data.
 ```
 
 For the first setup, prepare:
